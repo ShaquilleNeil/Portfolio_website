@@ -10,6 +10,10 @@
 html {
     scroll-behavior: smooth;
 }
+
+body{
+    overflow: hidden;
+}
  
 /* Dark Mode */
 .dark-mode {
@@ -145,7 +149,7 @@ html {
 .dark-mode .services .title::after,
 .dark-mode .teams .title::after {
     background: #000000;
-    content: "Que oferecemos";
+    /* content: "Que oferecemos"; */
 }
  
 .dark-mode .services .serv-content .card {
@@ -222,7 +226,7 @@ html {
     background-color: #e81313; 
     display: block;
     height: 100%;
-    width: 85%; 
+    width: 88%; 
     transition: width 0.5s; 
 }
 .dark-mode .skills .skills-content .right .line3 span {
@@ -236,7 +240,7 @@ html {
     background-color: #e81313; 
     display: block;
     height: 100%;
-    width: 42%; 
+    width: 50%; 
     transition: width 0.5s; 
 }
 .dark-mode .skills .skills-content .right .line2 span {
@@ -515,6 +519,10 @@ html {
 section {
     padding: 100px 0;
     background-color: #FEF9F3;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+
 }
  
 section .title {
@@ -569,10 +577,7 @@ footer {
 }
  
 /*  session about */
- 
-.about .title::after {
-    content: "Who am I?";
-}
+
  
 .about .about-content .left {
     width: 45%;
@@ -633,25 +638,42 @@ footer {
     background: #fff;
 }
  
-.services .title::after,
-.teams .title::after {
-    background: #FEF9F3;
-    content: "Excellence";
+.services .serv-content{
+      display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
- 
+
 .services .serv-content .card {
-    width: calc(33% - 20px);
-    background: #f0f0f0;
+    width: calc(18% - 10px);
+    margin-bottom: 10px;
+    background: #dcdcdc;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 50px;
     padding: 20px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-    height: 500px;
+    border: 2px solid rgb(74, 1, 74);
+   
 }
  
+.dark-mode .services .serv-content .card {
+    width: calc(18% - 10px);
+  color: white;
+    background: #000000;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgb(74, 1, 74);
+   
+}
 .services .serv-content .card:hover {
-    background: #e81313;
+     background: -webkit-linear-gradient(left, #D2D2D2, #6284FF, #FF0000, #6D0097, #1e13e8, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
  
 .services .serv-content .card .box {
@@ -676,11 +698,8 @@ footer {
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
- 
 /*  specialties session  */
-.skills .title::after {
-    content: "My Strengths";
-}
+
  
 .skills .skills-content .column {
     width: calc(50% - 30px);
@@ -830,10 +849,10 @@ footer {
     width: 42%;
 }
  
-/*  Team session  */
+ /* Team session 
 .teams .title::after {
     content: "The Heart & Soul";
-}
+} */
  .teams .carousel{
     /* display: flex;
     flex-direction: row;
@@ -926,9 +945,6 @@ footer {
 }
  
 /* Contact session  */
-.contact .title::after {
-    content: "Got Questions?";
-}
  
 .contact .contact-content .column {
     width: calc(50% - 30px);
