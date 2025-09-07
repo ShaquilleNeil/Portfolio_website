@@ -30,3 +30,32 @@ window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.navbar');
     navbar.classList.toggle('sticky', window.scrollY > window.innerHeight);
 });
+
+   $(document).ready(function(){
+            // Initialize Owl Carousel with default speed
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                items: 3,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 5000, // Default speed (5 seconds)
+                autoplayHoverPause: true,
+                nav: false,
+                navText: [
+                    '<i class="bi bi-arrow-left"></i>',
+                    '<i class="bi bi-arrow-right"></i>'
+                ],
+                dots: true
+            });
+            
+            // Speed control functionality
+            $('#speed-slider').on('input', function() {
+                var speed = $(this).val();
+                $('#speed-value').text(speed);
+                
+                // Update the autoplay speed
+                owl.trigger('stop.owl.autoplay');
+                owl.trigger('play.owl.autoplay', [parseInt(speed)]);
+            });
+        });
