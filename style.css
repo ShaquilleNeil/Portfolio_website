@@ -9,18 +9,26 @@
  
 html {
     scroll-behavior: smooth;
+
 }
 
 body{
-    
+   background-image: url(image/dd.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    overflow: hidden;
+}
+
+.dark-mode .body{
+   background-image: url(image/dd3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
     overflow: hidden;
 }
  
 /* Dark Mode */
-.dark-mode {
-    background-color: black;
-    color: white;
-  }
 
 .dark-mode .menu a#dark-mode-toggle img {
     vertical-align: middle; 
@@ -31,49 +39,25 @@ body{
     vertical-align: middle; 
     margin-right: 5px; 
 }
-  
-.dark-mode .navbar.sticky {
-    background: #e81313df;
-}
 
 
-.dark-mode .home{
-    background-image: url(image/test.svg);
-}
 
-.dark-mode .navbar .logo a span {
-    color: #e81313;
-    transition: all 0.3s ease;
-}
 
-.dark-mode .navbar .menu li a {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 25px;
-    transition: color 0.3s ease;
-}
-.dark-mode .navbar .menu li a:hover {
-    color: #e81313;
-}
+
+
+
 .max-width {
+    border-radius: 14px;
+    padding: 10px;
+   backdrop-filter: blur(10px);
+   background-color: rgba(255, 255, 255, 0.212);
     max-width: 1300px;
-    padding: 0 80px;
+    padding: 20px 80px;
     margin: auto;
 }
-.dark-mode section{
-    background-color: #000000;
-}
-.dark-mode section .title::after {
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    font-size: 20px;
-    background: #000000;
-    color: #e81313;
-    padding: 5px;
-    transform: translateX(-50%);
-} 
+
+
+
 
 .dark-mode .home .home-content .text-3 span {
     color: #e81313;
@@ -105,18 +89,10 @@ body{
     border-radius: 6px;
     border: 2px solid #e81313;
 }
-.dark-mode .about .title::after{
-    background: black;
-} 
 
 
-.dark-mode .about .about-content .right .text span {
-    color: #e81313;
-}
 
-.dark-mode .about .about-content .right .text span {
-    color: #e81313;
-}
+
 
 .dark-mode .about .about-content .right a {
     display: inline-block;
@@ -136,22 +112,10 @@ body{
     background: none;
 }
 
-.dark-mode .services,
-.dark-mode .teams {
-     background-image: url(image/grid.png);
-    color: #ffffff;
-}
  
-.dark-mode .services .title::before,
-.dark-mode .teams .title::before {
-    background: #000000;
-}
+
  
-.dark-mode .services .title::after,
-.dark-mode .teams .title::after {
-    background: #000000;
-    /* content: "Que oferecemos"; */
-}
+
  
 .dark-mode .services .serv-content .card {
     width: calc(33% - 20px);
@@ -334,31 +298,54 @@ body{
 
 /*  navbar   session*/
 .navbar {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     z-index: 999;
     transition: all 0.3s ease;
- 
+ backdrop-filter:blur(10px);
+ opacity: 1.9;
+ background-color: rgba(255, 255, 255, 0.212);
+ border-bottom: #5e5d5d5d 1px solid;
+
+}
+
+.dark-mode .navbar {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 999;
+    transition: all 0.3s ease;
+ backdrop-filter:blur(10px);
+ opacity: 1.9;
+ background-color: rgba(255, 255, 255, 0.212);
+ border-bottom: #5e5d5d5d 1px solid;
+
 }
  
 .navbar.sticky {
-    background: #9DC183;
+
     padding: 15px 0;
     opacity: 1.9;
 
 }
  
 .about-color {
-    background: #006dad;
+
     padding: 15px 0;
 }
 
-.dark-mode .about-color {
-    background: #006dad;
-    padding: 15px 0;
-}
+
 .navbar .max-width {
     display: flex;
     align-items: center;
@@ -390,15 +377,26 @@ body{
  
 .navbar .menu li a {
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 600;
     margin-left: 25px;
-    transition: color 0.3s ease;
+    transition: color 1.8s ease;
+    text-shadow: #000000 2px 2px 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
 }
  
 .navbar .menu li a:hover {
-    color: #e81313;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.219);
+    border: 1px solid #ffffff65;
+    border-radius: 5px;
+    padding: 3px 7px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
 }
+
+
  
 .navbar.sticky .menu li a:hover {
     color: #fff;
@@ -407,12 +405,14 @@ body{
 /*  Home start  */
 .home {
     display: flex;
-    background: url(image/test.svg) no-repeat;
+    /* background: url(image/dd4.jpg)  no-repeat center; */
     background-size: cover;
     height: 100vh;
     color: #fff;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
+    background-attachment: fixed;
+ 
 }
  
 .home .max-width {
@@ -521,10 +521,10 @@ body{
  
 /*  all similar codes  */
 section {
+    /* background-image: url(image/paper-clips-sticky-notes-near-keyboard-mouse.jpg); */
+    backdrop-filter: blur(10px);
     padding: 100px 0;
-    background-color: #FEF9F3;
     background-size: cover;
-    width: 100vw;
     height: 100vh;
 
 }
@@ -537,6 +537,7 @@ section .title {
     margin-bottom: 60px;
     padding-bottom: 20px;
     position: relative;
+    color: #ffffff;
 }
  
 section .title::before {
@@ -546,7 +547,7 @@ section .title::before {
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #111;
+    background: #f3f3f3;
     transform: translateX(-50%);
 }
  
@@ -567,7 +568,7 @@ section .title::after {
 .teams,
 .contact,
 footer {
-     background-image: url(image/grid.png);
+     /* background-image: url(image/dd2.jpg); */
     font-family: 'Roboto', sans-serif;
 }
  
@@ -634,13 +635,13 @@ footer {
 /*  services session */
 .services,
 .teams {
-    background-image: url(image/grid.png);
+    /* background-image: url(image/dd3.jpg); */
     color: #000000;
 }
  
 .services .title::before,
 .teams .title::before {
-    background: #000000;
+    background: #ffffff;
 }
  
 .services .serv-content{
@@ -653,14 +654,15 @@ footer {
 .services .serv-content .card {
     width: calc(18% - 10px);
     margin-bottom: 10px;
-    background: #dcdcdc;
+    background: #dcdcdc59;
     text-align: center;
     border-radius: 50px;
     padding: 20px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid #006dad;
-   
+    color: #fcfcfc;
+    text-shadow: #111111 2px 2px 2px;
 }
  
 .dark-mode .services .serv-content .card {
@@ -892,6 +894,10 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-top: 10px;
     transition: all 0.3s ease;
 }
  
@@ -982,7 +988,7 @@ footer {
 }
  
 .contact .contact-content .row .info .sub-title {
-    color: #333;
+    color: #ffffff;
 }
  
 .contact .contact-content .row ion-icon {
@@ -1327,7 +1333,7 @@ footer span a:hover {
 
 #projects {
     
-    background-image: url(image/grid.png);
+    /* background-image: url(image/dd2.jpg); */
     
   }
 
@@ -1342,13 +1348,13 @@ footer span a:hover {
   #projects .section-title,
   #projects .section-main-title {
     text-align: center;
-    color: #000;
+    color: #ffffff;
     font-family: 'Dancing Script';
   }
 
    #projects .section-title::before {
    
-    background: #111;
+    background: #ffffff;
    
 }
 
@@ -1395,7 +1401,7 @@ footer span a:hover {
   }
   .project-title {
     font-size: 1.5rem;
-    color: #000;
+    color: #ffffff;
     margin-bottom: 30px;
   }
     .dark-mode .project-title {
@@ -1456,6 +1462,7 @@ footer span a:hover {
     position: absolute; 
     top: 30px; 
     left: 1px; 
+    
   }
    
   .project-title {
@@ -1493,7 +1500,7 @@ footer span a:hover {
    
   .project-card {
     margin-top: 100px;
-    background: #ffffff; /* Card background */
+    background: #ffffff52; /* Card background */
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -1538,3 +1545,34 @@ footer span a:hover {
 a{
     text-decoration: none;
     color: inherit;}
+
+
+    .febutton{
+    border-radius: 15px;
+    border:2px solid purple ;
+    color: rgb(255, 255, 255);
+    margin-right: auto;
+    height: 40px;
+    width: 200px;
+    opacity: 1.9;;
+    background: -webkit-linear-gradient(left, #ee765236, #e73c7e3a, #23a6d5, #23d5ab3d);
+    -webkit-background-clip:text;
+    text-shadow: #111111b2 1px 1px 1px;
+    font-size: large;
+    -webkit-text-fill-color: transparent;  
+}
+
+
+.febutton i{
+    background: -webkit-linear-gradient(left, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+
+.dark-mode .febutton{
+    border-radius: 15px;
+    background-color: black;
+    border-color: purple;
+    color: white;
+    padding: 2px 2px;
+}
