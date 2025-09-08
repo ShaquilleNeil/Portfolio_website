@@ -16,7 +16,7 @@
 //     });})
 document.addEventListener('DOMContentLoaded', function() {
     var options = {
-        strings: ["LaSalle College Student Developer", "Front-end Developer", "programmer in HTML,JAVA,CSS,JQUERY"],
+        strings: ["LaSalle College Student Developer", "Junior Software Developer"],
         typeSpeed: 100,
         backSpeed: 100,  
         backDelay: 1500,

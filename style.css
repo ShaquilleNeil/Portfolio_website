@@ -13,11 +13,13 @@ html {
 }
 
 body{
-   background-image: url(image/dd.jpg);
+   background-image: url(image/dd3.jpg);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
     overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .dark-mode .body{
@@ -47,11 +49,32 @@ body{
 
 
 .max-width {
+    display: flex;
     border-radius: 14px;
     padding: 10px;
-   backdrop-filter: blur(10px);
-   background-color: rgba(255, 255, 255, 0.212);
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+   background-color: rgba(0, 0, 0, 0);
+   box-shadow: #ffffff22 0px 0px 0px 1px;
     max-width: 1300px;
+    padding: 20px 80px;
+    margin: auto;
+    
+}
+
+.max-width-home {
+     box-shadow: #ffffff22 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 14px;
+    padding: 10px;
+    width: 90%;
+    height: 90%;
+   backdrop-filter: blur(5px) ;
+   -webkit-backdrop-filter: blur(5px);
+   background-color: rgba(0, 0, 0, 0);
+    max-width: 100vw;
     padding: 20px 80px;
     margin: auto;
 }
@@ -65,7 +88,7 @@ body{
 }
 .dark-mode.home .home-content a {
     display: inline-block;
-    background: #000000;
+    background: #ff2828;
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
@@ -81,16 +104,26 @@ body{
 
 .dark-mode .home .home-content a {
     display: inline-block;
-    background: #e81313;
+    background: #c9c9c9;
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid #e81313;
+    border: 2px solid #ffffff;
 }
 
-
+.home .home-content .icon-box a{
+    display: inline-block;
+    background: transparent;
+    color: #f40201;
+    font-size: 25px;
+    padding: 2px 3px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.3s ease;
+}
 
 
 
@@ -119,7 +152,7 @@ body{
  
 .dark-mode .services .serv-content .card {
     width: calc(33% - 20px);
-    background: #3f3f3f;
+    background: #b89f9f;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
@@ -169,52 +202,10 @@ body{
     background: none;
 }
 
-.dark-mode .skills .skills-content .right .line1,
-.dark-mode .skills .skills-content .right .line2,
-.dark-mode .skills .skills-content .right .line0,
-.dark-mode .skills .skills-content .right .line3,
-.dark-mode .skills .skills-content .right .line4 {
-    width: 100%;
-    height: 5px;
-    background: #000000;
-    position: relative;
-}
 
-.dark-mode .skills .skills-content .right .line0 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 93%; 
-    transition: width 0.5s; 
-}
-.dark-mode .skills .skills-content .right .line1 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 88%; 
-    transition: width 0.5s; 
-}
-.dark-mode .skills .skills-content .right .line3 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 47%; 
-    transition: width 0.5s; 
-}
-.dark-mode .skills .skills-content .right .line4 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 50%; 
-    transition: width 0.5s; 
-}
-.dark-mode .skills .skills-content .right .line2 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 87%; 
-    transition: width 0.5s; 
-}
+
+
+
  /* .dark-mode .teams .carousel .card {
     background: #373737;
     border-radius: 6px;
@@ -310,7 +301,7 @@ body{
     transition: all 0.3s ease;
  backdrop-filter:blur(10px);
  opacity: 1.9;
- background-color: rgba(255, 255, 255, 0.212);
+ background-color: rgba(0, 0, 0, 0.218);
  border-bottom: #5e5d5d5d 1px solid;
 
 }
@@ -428,7 +419,8 @@ body{
     font-weight: 500;
     margin-left: -3px;
     color:rgb(255, 255, 255);
-   text-shadow: 6px 6px 0 #e81313;
+   text-shadow: 2px 2px 0 #f10103;
+
 }
 
 .dark-mode .home .home-content .text-2 {
@@ -436,7 +428,7 @@ body{
     font-weight: 500;
     margin-left: -3px;
     color:rgb(255, 255, 255);
-   text-shadow: 6px 6px 0 #8d0ff4;
+   text-shadow: 6px 6px 0 #f40201;
 }
 
 .home .home-content .text-3 {
@@ -445,24 +437,25 @@ body{
 }
  
 .home .home-content .text-3 span {
-    color: #006dad;
+    color: #f40201;
     font-weight: 500;
+    text-shadow: #f1ede400 2px 2px 0;
 }
  
 .home .home-content a {
     display: inline-block;
-    background: #006dad;
+    background: #f40201;
     color: #fff;
-    font-size: 25px;
-    padding: 12px 36px;
+    font-size: 20px;
+    padding: 2px 6px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid #006dad;
+    border: none;
 }
  
 .home .home-content a:hover {
-    color: #e81313;
-    background: none;
+    color: #ffffff;
+    background: #2288af;
 }
  
 /*  Menu  Mobile  */
@@ -482,7 +475,7 @@ body{
     text-align: center;
     line-height: 50px;
     color: #fff;
-    background: #006dad;
+    background: #f10103;
     border-radius: 6px;
     font-size: 30px;
     z-index: 9999;
@@ -522,7 +515,7 @@ body{
 /*  all similar codes  */
 section {
     /* background-image: url(image/paper-clips-sticky-notes-near-keyboard-mouse.jpg); */
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(2px); */
     padding: 100px 0;
     background-size: cover;
     height: 100vh;
@@ -609,14 +602,14 @@ footer {
  
 .about .about-content .right a {
     display: inline-block;
-    background: #006dad;
+    background: #f10103;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid #006dad;
+    border: 2px solid #f10103;
     transition: all 0.3s ease;
 }
  
@@ -654,27 +647,28 @@ footer {
 .services .serv-content .card {
     width: calc(18% - 10px);
     margin-bottom: 10px;
-    background: #dcdcdc59;
+    background: #dcdcdc1d;
     text-align: center;
     border-radius: 50px;
     padding: 20px 25px;
+    backdrop-filter: blur(12px);
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid #006dad;
+    border: 1px solid #f101016d;
     color: #fcfcfc;
     text-shadow: #111111 2px 2px 2px;
 }
  
 .dark-mode .services .serv-content .card {
     width: calc(18% - 10px);
-  color: white;
+  color: rgb(255, 245, 245);
     background: #000000;
     text-align: center;
     border-radius: 20px;
     padding: 10px 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid #006dad;
+    border: 2px solid #f10103;
    
 }
 .services .serv-content .card:hover {
@@ -735,10 +729,6 @@ footer {
     transition: all 0.3s ease;
 }
  
-.skills .skills-content .left a:hover {
-    color: #e81313;
-    background: none;
-}
  
 .skills .skills-content .right .bars {
     margin-bottom: 15px;
@@ -755,63 +745,13 @@ footer {
     font-size: 18px;
 }
  
-.skills .skills-content .right .line1,
-.skills .skills-content .right .line2,
-.skills .skills-content .right .line0,
-.skills .skills-content .right .line3,
-.skills .skills-content .right .line4{
-    width: 100%;
-    height: 5px;
-    background: #ccc;
-    position: relative;
-}
 
-.dark-mode .skills .skills-content .right .line1,
-.dark-mode .skills .skills-content .right .line2,
-.dark-mode .skills .skills-content .right .line0,
-.dark-mode .skills .skills-content .right .line3,
-.dark-mode .skills .skills-content .right .line4{
-    width: 100%;
-    height: 5px;
-    background: #ccc;
-    position: relative;
-}
 
-.skills .skills-content .right .line0 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 93%; 
-    transition: width 0.5s; 
-}
-.skills .skills-content .right .line1 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 88%; 
-    transition: width 0.5s; 
-}
-.skills .skills-content .right .line3 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 47%; 
-    transition: width 0.5s; 
-}
-.skills .skills-content .right .line4 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 50%; 
-    transition: width 0.5s; 
-}
-.skills .skills-content .right .line2 span {
-    background-color: #e81313; 
-    display: block;
-    height: 100%;
-    width: 87%; 
-    transition: width 0.5s; 
-}
+
+
+
+
+
 
 
 
@@ -1052,8 +992,8 @@ footer {
 .contact .right form .button button {
     width: 100%;
     height: 100%;
-    border: 2px solid #e81313;
-    background: #e81313;
+    border: 2px solid #ffffff41;
+    background: #FF8A65;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -1433,6 +1373,8 @@ footer span a:hover {
    .dark-mode .project-desc {
     color: #ffffff;
     flex-grow: 1;
+    text-shadow: #000000 1px 1px 1px;
+  
   }
    
   /* .project-image {
@@ -1489,7 +1431,7 @@ footer span a:hover {
    
   
   .visit-button:hover {
-    background-color:#006dad;
+    background-color:#f10103;
   }
    
   
@@ -1500,16 +1442,19 @@ footer span a:hover {
    
   .project-card {
     margin-top: 100px;
-    background: #ffffff52; /* Card background */
+    background: #00000052; /* Card background */
     border-radius: 10px;
     overflow: hidden;
     position: relative;
     padding: 10px; 
-    /* Increase size as desired */
     height: 450px; 
     width: 380px;
-    border: 3px solid #006dad;
-    color: #000000;
+    color: #ffffff;
+    border: 4px solid #f1010190;
+    box-shadow: 
+        0 4px 12px rgba(255, 255, 255, 0.2), 
+        inset 0 0 20px rgba(255, 255, 255, 0.1); 
+          backdrop-filter: blur(5px);
    
   }
     .dark-mode .project-card {
@@ -1521,7 +1466,7 @@ footer span a:hover {
     /* Increase size as desired */
     height: 400px;
     width: 380px;
-    border: 3px solid #006dad;
+    border: 3px solid #f10103;
    
   }
 
@@ -1553,7 +1498,7 @@ a{
     color: rgb(255, 255, 255);
     margin-right: auto;
     height: 40px;
-    width: 200px;
+    width: 300px;
     opacity: 1.9;;
     background: -webkit-linear-gradient(left, #ee765236, #e73c7e3a, #23a6d5, #23d5ab3d);
     -webkit-background-clip:text;
@@ -1575,4 +1520,41 @@ a{
     border-color: purple;
     color: white;
     padding: 2px 2px;
+}
+
+.profile {
+    width: 600px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 50px;
+    border: 3px solid #f10103;
+    position: relative;
+    box-shadow: 
+        0 4px 12px #f10101fb, 
+        inset 0 0 20px rgba(251, 251, 251, 0.963); 
+        
+  }
+  
+  .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  
+    
+  
+   
+
+  
+  }
+
+ 
+p{
+    color: #ffffff;
+    font-size: large;
+    font-weight: 500;
+    text-shadow: #95efb7 1px 1px 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
