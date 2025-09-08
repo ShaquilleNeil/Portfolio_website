@@ -378,19 +378,18 @@ body{
 }
  
 .navbar .menu li a:hover {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.219);
-    border: 1px solid #ffffff65;
-    border-radius: 5px;
-    padding: 3px 7px;
-    backdrop-filter: blur(10px);
-    transition: all 0.4s ease;
+    color: #f40201;
+    
+    
+
+   
 }
+
 
 
  
 .navbar.sticky .menu li a:hover {
-    color: #fff;
+    color: #f40201;
 }
  
 /*  Home start  */
@@ -1355,7 +1354,7 @@ footer span a:hover {
    margin-top: -10px;
   }
    .project-tech {
-    color: #000000; 
+    color: #ffffff; 
     margin-top: 1px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -1367,13 +1366,13 @@ footer span a:hover {
   }
    
  .project-desc {
-    color: #000000; /* Description color */
+    color: #fffdfd; /* Description color */
     flex-grow: 1; /* Allows the description to fill the space */
   }
    .dark-mode .project-desc {
     color: #ffffff;
     flex-grow: 1;
-    text-shadow: #000000 1px 1px 1px;
+    text-shadow: #ffffff 1px 1px 1px;
   
   }
    
@@ -1417,7 +1416,7 @@ footer span a:hover {
   .visit-button {
     position: absolute;
     top: 20px; 
-    right: 20px; 
+    right: 10px; 
     background-color: #DC143C;
     color: white;
     border: 1px solid transparent;
@@ -1502,7 +1501,7 @@ a{
     opacity: 1.9;;
     background: -webkit-linear-gradient(left, #ee765236, #e73c7e3a, #23a6d5, #23d5ab3d);
     -webkit-background-clip:text;
-    text-shadow: #111111b2 1px 1px 1px;
+    text-shadow: #e7e7e7b2 1px 1px 1px;
     font-size: large;
     -webkit-text-fill-color: transparent;  
 }
@@ -1554,7 +1553,7 @@ p{
     color: #ffffff;
     font-size: large;
     font-weight: 500;
-    text-shadow: #95efb7 1px 1px 1px;
+    text-shadow: #ffffff 1px 1px 1px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
