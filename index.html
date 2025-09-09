@@ -14,6 +14,16 @@
     <link href="style.css" rel="stylesheet">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script type="text/javascript" src="java.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "OA4VGF-OPafeORdSI",
+      });
+   })();
+</script>
     <title>Portfolio</title>
 </head>
 <body>
@@ -299,256 +309,230 @@
 
 
 
-
-    <section class="contact" id="contact">
-         <h2 class="title">Contact</h2>
+ <section class="contact" id="contact">
+        <h2 class="title">Contact</h2>
         <div class="max-width">
-           
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Contact us</div>
-                    <p>I strive daily for nothing short of excellence in the field of software development.</p>
- 
-                    <div class="icons">
-                        <div class="row">
-                            <ion-icon name="person-outline"></ion-icon>
-                            <div class="info">
-                                <div class="head" style="color: #f10103;">My Name:</div>
-                                <div class="sub-title">Shaquille Osborne Neil</div>
-                            </div>
-                        </div>
- 
-                        <div class="row">
-                            <ion-icon name="earth-outline"></ion-icon>
-                            <div class="info">
-                                <div class="head" style="color: #f10103;">My Address:</div>
-                                <div class="sub-title">10490 Ave Curotte Montreal</div>
-                            </div>
+        <div class="contact-content">
+            <div class="column left">
+                <div class="text">Get in Touch</div>
+                <p>I strive daily for nothing short of excellence in the field of software development.</p>
+                <div class="icons">
+                    <div class="row">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <div class="info">
+                            <div class="head">Name:</div>
+                            <div class="sub-title">Shaquille Osborne Neil</div>
                         </div>
                     </div>
-                   
+                    <div class="row">
+                        <ion-icon name="earth-outline"></ion-icon>
+                        <div class="info">
+                            <div class="head">Address:</div>
+                            <div class="sub-title">10490 Ave Curotte, Montreal</div>
+                        </div>
+                    </div>
                     <div class="row">
                         <ion-icon name="mail-outline"></ion-icon>
                         <div class="info">
-                            <div class="head" style="color: #f10103;">My Email:</div>
+                            <div class="head">Email:</div>
                             <div class="sub-title">Shaquille-36@hotmail.com</div>
                         </div>
                     </div>
                 </div>
- 
-                <div class="column right">
-                    <div class="text">Message me</div>
-                    <form id="form" action="signup.html" method="post">
-                        <div class="fields">
-                            <div class="field">
-                                
-                                <input id="name" type="text" placeholder="Your first name:">
-                                <div class="error" id="nameerror"></div>
-                            </div>
- 
-                            <div class="field">
-                               
-                                <input class="email" id="email" type="text" placeholder="Your email:">
-                                <div class="error" id="emailerror"></div>
-                            </div>
+            </div>
+            <div class="column-right">
+                <div class="text">Message me</div>
+                <form id="contact-form">
+                    <div class="fields">
+                        <div class="field">
+                            <input id="name" type="text" placeholder="Your first name" required>
+                            <div class="error" id="nameerror"></div>
                         </div>
- 
-                        
-                            <div class="field">
-                               
-                                <input id="surname" type="text" placeholder="Your surname">
-                                <div class="error" id="surnameerror"></div>
-                             
-                            <div class="textarea">
-                                
-                                <textarea id="textarea" cols="30" rows="10" placeholder="Write your message here"></textarea>
-                                <div class="error" id="texterror"></div><br>
-                            </div>
- 
-                            <div class="button">
-                                <button id="submitbtn" type="submit" onclick="openpopup()">Send</button>
-                            </div>
+                        <div class="field">
+                            <input id="surname" type="text" placeholder="Your surname" required>
+                            <div class="error" id="surnameerror"></div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="field">
+                        <input id="email" type="email" placeholder="Your email" required>
+                        <div class="error" id="emailerror"></div>
+                    </div>
+                    <div class="field textarea">
+                        <textarea id="message" cols="30" rows="10" placeholder="Write your message here" required></textarea>
+                        <div class="error" id="messageerror"></div>
+                    </div>
+                    <div class="button">
+                        <button type="submit" >Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
-        
-    <div class="popup" id="popup">
-        <img src="image/confirm.png">
-        <h2>CONFIRM YOUR INFO</h2>
-        <div id="infopop"></div>
-        <div class="buttoncontainer">
-       <button class="popbutton" id="popbuttonC" onclick="downloadFile()">Confirm</button>
-       <button class="popbutton" type="reset" onclick="closepopup()">Cancel</button>
-      </div>
-      </div>
+        </div>
     </section>
-    <div class="menu-btn"></div>
     
-    
+    <div class="success-message" id="success-message">
+        <ion-icon name="checkmark-circle"></ion-icon> Message sent successfully!
+    </div>
 
     <footer>
-      Created by <span><a>Shaquille Neil</a></span> | All rights reserved Lasalle College 2024
-     
-      <button onclick="topFunction()" class="scroll-up-btn" title="Go to top"><img src="image/caret-up-outline.svg"></button>
-
+        Created by <span><a>Shaquille Neil</a></span> | All rights reserved Lasalle College 2024
     </footer>
+    
+    <button class="scroll-up-btn" title="Go to top">
+        <ion-icon name="caret-up-outline"></ion-icon>
+    </button>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script>
-           function topFunction() {
-            $("html, body").animate({ scrollTop: 0 }, 50);
-        }
-
-       $(document).ready(function() {
-
-    function openpopup() {
-        $('#popup').addClass("open-popup");
-    }
-
-    
-    function closepopup() {
-        $('#popup').removeClass("open-popup");
-    }
-
-    function updatePopupContent() {
-        const name = form.elements["name"].value;
-        const email = form.elements["email"].value;
-        const surname = form.elements["surname"].value;
-        const text = form.elements["textarea"].value;
-
-        const Ipop = document.getElementById("infopop");
-        Ipop.innerHTML = `
-            <p><b>First Name:</b> ${name}</p>
-            <p><b>Surname:</b> ${surname}</p>
-            <p><b>Email:</b> ${email}</p>
-            <p><b>Message:</b>${text}</p>
-        `;
-    }
-
-    
-    $("#submitbtn").on("click", function(event) {
-        event.preventDefault(); // Prevent the form from submitting
-
-        // Validate the form
-        let isValid = true;
-        $('.error').text('');
-
-        let name = $('#name').val().trim();
-        if (name === "") {
-            $('#nameerror').text('First Name is required');
-            isValid = false;
-        }  
-
-        let email = $('#email').val().trim();
-    if (email === "") {
-        $('#emailerror').text('Email is required');
-        isValid = false;
-    } else {
-       
-        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            $('#emailerror').text('Please enter a valid email address');
-            isValid = false;
-        }
-    }
-
-        let surname = $('#surname').val().trim();
-        if (surname === "") {
-            $('#surnameerror').text('Surname is required');
-            isValid = false;
-        }  
-       
-        
-        let text= $('#textarea').val().trim();
-        if (text === "") {
-            $('#texterror').text('Please Type something');
-            isValid = false;
-        }  
-
-        if (isValid) {
-            updatePopupContent()
-            openpopup();
-        }
-    });
-
-    
-    $("#popbuttonC, .popbutton[type='reset']").on("click", function() {
-        closepopup(); 
-    });
-
-    $("a").on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 60, function() {
-                window.location.hash = hash;
+        $(document).ready(function(){
+            // Mobile menu toggle
+            $('.menu-btn').click(function(){
+                $('.menu').toggleClass('active');
+                $('.menu-btn').toggleClass('active');
             });
-        }
-
-        if ($(this).attr("href") === "#about") {
-            $(".navbar").addClass("about-color");
-        } else {
-            $(".navbar").removeClass("about-color");
-        }
-    });
-
-    // Scroll up button
-    $(".scroll-up-btn").hide();
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            $('.scroll-up-btn').fadeIn();
-        } else {
-            $('.scroll-up-btn').fadeOut();
-        }
-    });
-
-   
-    $(".scroll-up-btn").on("click", function(e) {
-        e.preventDefault();
-        $("html, body").animate({ scrollTop: 0 }, 100);
-    });
-
-   
-    $('.owl-carousel').owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 10,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 3
+            
+            // Scroll to top button
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 100){
+                    $('.scroll-up-btn').addClass('show');
+                } else {
+                    $('.scroll-up-btn').removeClass('show');
+                }
+            });
+            
+            $('.scroll-up-btn').click(function(){
+                $('html, body').animate({scrollTop: 0}, 800);
+            });
+            
+            // Smooth scrolling for menu links
+            $('a[href*="#"]').on('click', function(e){
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 500);
+                e.preventDefault();
+            });
+            
+            // Dark mode toggle
+            $('#dark-mode-toggle').click(function(){
+                $('body').toggleClass('dark-mode');
+                
+                if($('body').hasClass('dark-mode')){
+                    $('#dark-mode-toggle ion-icon').attr('name', 'moon-outline');
+                } else {
+                    $('#dark-mode-toggle ion-icon').attr('name', 'sunny-outline');
+                }
+            });
+            
+            // Initialize Owl Carousel
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,
+                dots: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+            
+            // Form validation and submission
+            $('#contact-form').on('submit', function(e){
+                e.preventDefault();
+                
+                // Reset errors
+                $('.error').text('');
+                
+                let isValid = true;
+                
+                // Validate name
+                const name = $('#name').val().trim();
+                if(name === ''){
+                    $('#nameerror').text('First name is required');
+                    isValid = false;
+                }
+                
+                // Validate surname
+                const surname = $('#surname').val().trim();
+                if(surname === ''){
+                    $('#surnameerror').text('Surname is required');
+                    isValid = false;
+                }
+                
+                // Validate email
+                const email = $('#email').val().trim();
+                if(email === ''){
+                    $('#emailerror').text('Email is required');
+                    isValid = false;
+                } else if(!isValidEmail(email)){
+                    $('#emailerror').text('Please enter a valid email address');
+                    isValid = false;
+                }
+                
+                // Validate message
+                const message = $('#message').val().trim();
+                if(message === ''){
+                    $('#messageerror').text('Message is required');
+                    isValid = false;
+                }
+                
+                if(isValid){
+                    // Prepare email parameters - FIXED to match your template variables
+                    const templateParams = {
+                        name: name + ' ' + surname,
+                        email: email,
+                        message: message,
+                        time: new Date().toLocaleString()
+                    };
+                    
+                    console.log('Sending email with params:', templateParams);
+                    
+                    // Send email using EmailJS - UPDATE THESE VALUES WITH YOUR ACTUAL IDs
+                    emailjs.send("service_y6eazdo", "template_ub1t1gu", templateParams)
+                        .then(function(response) {
+                            console.log('SUCCESS!', response.status, response.text);
+                            showSuccessMessage();
+                            alert('Message sent successfully!');
+                            $('#contact-form')[0].reset();
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                            alert('Failed to send message. Please try again later.');
+                        });
+                }
+            });
+            
+            // Email validation function
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
             }
-        }
-    });
-
-    $('#dark-mode-toggle').click(function(event) {
-        event.preventDefault(); 
-        $('body').toggleClass('dark-mode');
-
-        if ($('body').hasClass('dark-mode')) {
-            $('#dark-mode-toggle img').attr('src', 'image/moon-outline.svg');
-        } else {
-            $('#dark-mode-toggle img').attr('src', 'image/sunny-outline.svg');
-        }
-    });
-
-  
-});
+            
+            // Show success message
+            function showSuccessMessage() {
+                const successMsg = $('#success-message');
+                successMsg.addClass('show');
+                
+                setTimeout(function() {
+                    successMsg.removeClass('show');
+                }, 3000);
+            }
+            
+            // // For testing without actual EmailJS account
+            // function sendTestEmail(params) {
+            //     console.log('Test email would be sent with:', params);
+            //     showSuccessMessage();
+            //     $('#contact-form')[0].reset();
+            // }
+        });
     </script>
     
+        
+    </script>
 
 </body>
 </html>

@@ -937,20 +937,20 @@ padding-bottom: 50px;
     color: #e81313;
 }
  
-.contact .right form .fields {
+.contact .column-right form .fields {
     display: flex;
   
 }
  
-.contact .right form .field,
-.contact .right form .fields .field {
+.contact .column-right form .field,
+.contact .column-right form .fields .field {
     width: 100%;
     height: 45px;
     margin-bottom: 15px;
 }
  
-.contact .right form .field input,
-.contact .right form .textarea textarea {
+.contact .column-right form .field input,
+.contact .column-right form .textarea textarea {
     width: 100%;
     height: 100%;
     border: 1px solid #ccc;
@@ -961,36 +961,38 @@ padding-bottom: 50px;
     font-family: 'Roboto', sans-serif;
 }
  
-.contact .right form .name {
+.contact .column-right form .name {
     margin-right: 10px;
 }
  
-.contact .right form .email {
-    margin-left: 10px;
+.contact .column-right form .email {
+ background-color: #6D0097;
+    width: 110%;
 }
  
-.contact .right form .textarea {
-    width: 103%;
-    height: 80px;
+.contact .column-right form .textarea {
+    width: 100%;
+    height: 200px;
     margin-bottom: 15px;
 }
  
-.contact .right form #surname {
-    width: 103%;
+.contact .column-right form #surname {
+    width: 95%;
+    margin-left: 10px;
   
 }
-.contact .right form .textarea textarea {
+.contact .column-right form .message textarea {
     padding-top: 10px;
     resize: none;
 }
  
-.contact .right form .button {
+.contact .column-right form .button {
     width: 170px;
     height: 47px;
     padding-top: 10px;
 }
  
-.contact .right form .button button {
+.contact .column-right form .button button {
     width: 100%;
     height: 100%;
     border: 2px solid #ffffff41;
@@ -1004,7 +1006,7 @@ padding-bottom: 50px;
     
 }
  
-.contact .right form .button button:hover {
+.contact .column-right form .button button:hover {
     color: #e81313;
     background: none;
 }
