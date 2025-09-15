@@ -782,54 +782,7 @@ footer {
     background: #FF7F50;
 }
 
-.skills .skills-content .right .line::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #FF7F50;
-}
  
-.skills .skills-content .right .html::before {
-    width: 93%;
-}
- 
-.skills .skills-content .right .css::before {
-    width: 85%;
-}
- 
-.skills .skills-content .right .js::before {
-    width: 87%;
-}
- 
-.skills .skills-content .right .php::before {
-    width: 47%;
-}
- 
-.skills .skills-content .right .mysql::before {
-    width: 42%;
-}
-  */
- /* Team session 
-.teams .title::after {
-    content: "The Heart & Soul";
-/* } */
-
- } */
-/* .teams .carousel .card { */
-    /* background: #f0f0f0;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    transition: all 0.3s ease;
-    margin: 0 15px;
-    height: 400px;
-}
- 
-.teams .carousel .card:hover {
-    background: #FF7F50;
-} */
  
 .teams .carousel .card img {
     width: 150px;
