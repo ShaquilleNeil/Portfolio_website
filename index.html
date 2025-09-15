@@ -38,11 +38,11 @@
         </div> -->
          <button class="febutton"><i class="bi bi-stars"></i> Junior Software developer</button>
         <ul class="menu">
-            <li><a href="#home">Start</a></li>
+            <li><a href="#home">START</a></li>
             <!-- <li><a href="#about">About</a></li> -->
-            <li><a href="#services" >Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#services" >SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
             <li>
                 <a id="dark-mode-toggle"><img src="image/sunny-outline.svg"></a>
         
@@ -62,8 +62,8 @@
         <a href="https://www.instagram.com/p/C6SiMyKAT2v/" target="_blank"><i class="bi bi-instagram"></i></a>
         <a href="https://www.linkedin.com/in/shaquille-neil-b84a11285/" target="_blank"><i class="bi bi-linkedin"></i></a>
     </div>
-                  <a href="Docs/My Resume (1).pdf" download="Shaquille's Resume">Download CV</a>
-            <a href="#contact">Contact me</a>
+                  <a href="Docs/My Resume (1).pdf" download="Shaquille's Resume">DOWNLOAD CV</a>
+            <a href="#contact">CONTACT ME</a>
         </div>
 
          
@@ -299,7 +299,31 @@
                   <p class="project-desc">Simple Calculator made with html, css and js</p>
                 </div>
                 <img src="image/Screenshot 2025-09-08 231620.png "style="margin-top: 30px;" alt="PfpFinder" class="project-image">
-              </div></div>
+              </div>
+            
+             <div class="project-card">
+                <div class="project-info">
+                    <img src="image/icons8-clock-512.png" style="margin-right: 100px;" alt="Icon" class="project-icon">
+                  <h3 class="project-title">IOS Basic profile</h3>
+                  <p class="project-tech">Xcode | Swift </p>
+                  <button class="visit-button"><a href="https://shaquilleneil.github.io/Functional-Clock/" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
+                  <p class="project-desc"> A Simple one page profile made in Xcode</p>
+                </div>
+                <img src="image/Screenshot 2025-09-14 at 11.51.41 PM.png" style="width: 50%; height: 50%; margin-top: 50px; margin-left: 25%;" alt="PfpFinder" class="project-image">
+              </div>
+            
+             <div class="project-card">
+                <div class="project-info">
+                    <img src="image/icons8-clock-512.png" style="margin-right: 100px;" alt="Icon" class="project-icon">
+                  <h3 class="project-title">Basic Android Form</h3>
+                  <p class="project-tech">XML | JAVA | Android Studio </p>
+                  <button class="visit-button"><a href="https://shaquilleneil.github.io/Functional-Clock/" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
+                  <p class="project-desc"> A Simple android form with validation and hidden layouts</p>
+                </div>
+                <img src="image/Screenshot 2025-09-14 at 11.52.41 PM.png" style="width: 50%; height: 50%; margin-top: 50px;margin-left: 25%;" alt="PfpFinder" class="project-image">
+              </div>
+              
+            </div>
             
           </div>
         </div>
@@ -412,15 +436,17 @@
             });
             
             // Dark mode toggle
-            $('#dark-mode-toggle').click(function(){
-                $('body').toggleClass('dark-mode');
-                
-                if($('body').hasClass('dark-mode')){
-                    $('#dark-mode-toggle ion-icon').attr('name', 'moon-outline');
-                } else {
-                    $('#dark-mode-toggle ion-icon').attr('name', 'sunny-outline');
-                }
-            });
+           
+$('#dark-mode-toggle').click(function(){
+    $('body').toggleClass('dark-mode');
+    
+    // Optional: Change the icon based on mode
+    if($('body').hasClass('dark-mode')){
+        $('#dark-mode-toggle img').attr('src', 'image/moon-outline.svg');
+    } else {
+        $('#dark-mode-toggle img').attr('src', 'image/sunny-outline.svg');
+    }
+});
             
             // Initialize Owl Carousel
             $('.owl-carousel').owlCarousel({
