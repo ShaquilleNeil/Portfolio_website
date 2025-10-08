@@ -261,7 +261,9 @@
                                     target="_blank">Demo <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
                             <p class="project-desc">Interactive construction company website</p>
                         </div>
-                        <img src="image/Screenshot 2025-09-07 162038.png" alt="PfpFinder" class="project-image">
+                        <div class="project-media">
+                        <img src="image/Screenshot 2025-09-07 162038.png" style="height: 230px;" alt="PfpFinder" class="project-image">
+                        </div>
 
                     </div>
 
@@ -275,7 +277,9 @@
                                     target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
                             <p class="project-desc"> A Simple Functional Clock</p>
                         </div>
-                        <img src="image/Screenshot 2025-09-08 230743.png" alt="PfpFinder" class="project-image">
+                        <div class="project-media">
+                        <img src="image/Screenshot 2025-09-08 230743.png" style="height: 230px;" alt="PfpFinder" class="project-image">
+                        </div>
                     </div>
 
                     <div class="project-card">
@@ -284,10 +288,12 @@
                                 class="project-icon">
                             <h3 class="project-title">BrickBasket</h3>
                             <p class="project-tech">HTML | CSS | JavaScript | Firebase | React </p>
-                            <button class="visit-button">In Progress<i class="bi bi-arrow-up-right-circle-fill"></i></button>
+                            <button class="visit-button">In Progress</button>
                             <p class="project-desc"> A construction material delivery website that allows users to place, track and pay for orders</p>
                         </div>
-                        <img src="image/Homepage.png" alt="PfpFinder" class="project-image">
+                        <div class="project-media">
+                        <img src="image/Homepage.png" style="height: 230px;" alt="PfpFinder" class="project-image">
+                        </div>
                     </div>
 
 
@@ -302,7 +308,12 @@
                             <p class="project-desc"> A clone of LinkedIn, mock up only, no login or backend features
                                 have been added</p>
                         </div>
-                        <img src="image/home2.png" style="object-fit: contain; height: 55%;" alt="PfpFinder" class="project-image">
+                        <div class="project-media">
+                            <video class="project-image" autoplay muted loop controls  style="object-fit: contain; height: 30%;">
+                                <source src="image/Simulator Screen Recording - iPhone 16 Pro - 2025-10-08 at 10.19.15.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
 
                     <div class="project-card">
@@ -314,7 +325,9 @@
                                     target="_blank">Viewt <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
                             <p class="project-desc">Simple Calculator made with html, css and js</p>
                         </div>
-                        <img src="image/Screenshot 2025-09-08 231620.png " style="object-fit: contain; height: 55%;" alt="PfpFinder" class="project-image">
+                        <div class="project-media">
+                        <img src="image/Screenshot 2025-09-08 231620.png " style="object-fit: contain; height: 60%;" alt="PfpFinder" class="project-image">
+                        </div>
                     </div>
 
                     <div class="project-card">
@@ -327,7 +340,9 @@
                                     target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
                             <p class="project-desc"> A Simple one page profile made in Xcode</p>
                         </div>
-                        <img src="image/Screenshot 2025-09-14 at 11.51.41 PM.png" style="object-fit: contain; height: 55%;" alt="PfpFinder" class="project-image">
+                        <div class="project-media">
+                        <img src="image/Screenshot 2025-09-14 at 11.51.41 PM.png" style="object-fit: contain; height: 35%;" alt="PfpFinder" class="project-image">
+                        </div>
                     </div>
 
                     <div class="project-card">
@@ -353,10 +368,10 @@
                                     target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
                             <p class="project-desc"> A Simple Calculator made in Xcode</p>
                         </div>
-                        <img src="image/Calc.png" style="object-fit: contain; height: 55%;" alt="PfpFinder" class="project-image">
-                    </div>
-
-
+                        <video class="project-image" autoplay muted loop controls  style="object-fit: contain; height: 60%;">
+                            <source src="image/calc.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     <div class="project-card">
                         <div class="project-info">
                             <img src="image/android.png" style="margin-right: 100px;" alt="Icon" class="project-icon">
@@ -606,6 +621,39 @@
 
 
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const modal = document.getElementById("lightbox-modal");
+          const modalImg = document.getElementById("lightbox-img");
+          const closeBtn = document.querySelector(".lightbox-close");
+      
+          document.querySelectorAll(".project-image").forEach(img => {
+            img.addEventListener("click", function () {
+              modal.style.display = "block";
+              modalImg.src = this.src;
+            });
+          });
+      
+          closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+          });
+      
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+              modal.style.display = "none";
+            }
+          });
+        });
+      </script>
+      
+
+    <!-- Lightbox Modal -->
+<div id="lightbox-modal" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+
 
 </body>
 
