@@ -21,7 +21,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 
 body.dark-mode {
@@ -33,6 +33,7 @@ body.dark-mode {
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 
 /* Dark Mode */
 
@@ -1048,7 +1049,7 @@ footer span a:hover {
     width: 100%;
     display: block;
     padding: 10px;
-    object-fit: cover;
+    object-fit: contain;
 
 }
 
