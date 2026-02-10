@@ -86,6 +86,15 @@ body.dark-mode {
     vertical-align: middle;
 }
 
+/* Sun icon is white in SVG – make it dark in light mode so it’s visible */
+.menu a#dark-mode-toggle img {
+    filter: brightness(0);
+}
+
+.dark-mode .menu a#dark-mode-toggle img {
+    filter: none;
+}
+
 
 .max-width {
     width: 92%;
