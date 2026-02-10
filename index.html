@@ -43,8 +43,9 @@
             <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#contact">CONTACT</a></li>
             <li>
-                <a id="dark-mode-toggle"><img src="image/sunny-outline.svg"></a>
-
+                <a id="dark-mode-toggle" href="javascript:void(0)" role="button" aria-label="Toggle dark mode">
+                    <img src="./image/sunny-outline.svg" alt="Light mode" id="dark-mode-icon">
+                </a>
             </li>
             </ul>
         </div>
@@ -530,15 +531,14 @@
             });
 
             // Dark mode toggle
-
-            $('#dark-mode-toggle').click(function () {
+            $('#dark-mode-toggle').click(function (e) {
+                e.preventDefault();
                 $('body').toggleClass('dark-mode');
 
-                // Optional: Change the icon based on mode
                 if ($('body').hasClass('dark-mode')) {
-                    $('#dark-mode-toggle img').attr('src', 'image/moon-outline.svg');
+                    $('#dark-mode-icon').attr('src', './image/moon-outline.svg').attr('alt', 'Dark mode');
                 } else {
-                    $('#dark-mode-toggle img').attr('src', 'image/sunny-outline.svg');
+                    $('#dark-mode-icon').attr('src', './image/sunny-outline.svg').attr('alt', 'Light mode');
                 }
             });
 
