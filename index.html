@@ -1,708 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaquille Neil | Portfolio</title>
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" nomodule></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="script.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script type="text/javascript" src="java.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script>
+        (function () { emailjs.init({ publicKey: "OA4VGF-OPafeORdSI" }); })();
     </script>
-
-
-
-
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "OA4VGF-OPafeORdSI",
-            });
-        })();
-    </script>
-    <title>Portfolio</title>
 </head>
-
 <body>
-
-    <div class="navbar">
+    <header class="navbar">
         <div class="navbar-inner">
-            <button class="febutton"><i class="bi bi-stars"></i> Junior Software Developer</button>
+            <div class="brand">Shaquille.dev</div>
+            <button class="menu-btn" aria-label="Open navigation"><i class="bi bi-list"></i></button>
             <ul class="menu">
-            <li><a href="#home">START</a></li>
-            <!-- <li><a href="#about">About</a></li> -->
-            <li><a href="#services">SKILLS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-            <li>
-                <a id="dark-mode-toggle" href="javascript:void(0)" role="button" aria-label="Toggle dark mode">
-                    <img src="./image/sunny-outline.svg" alt="Light mode" id="dark-mode-icon">
-                </a>
-            </li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </div>
-    <section class="home" id="home">
-        <div class="max-width-home">
-            <div class="home-content">
-                <div class="text-1">Hello my name is</div>
-                <div class="text-2">Shaquille Osborne Neil</div>
-                <div class="text-3">I am a <span>junior web developer</span></div>
-                <p>Junior Full-Stack Developer specializing in React, Node.js, Swift, and Kotlin for web and mobile applications</p>
-                <div class="icon-box">
-                    <a href="https://github.com/ShaquilleNeil" target="_blank"><i class="bi bi-github"></i></a>
-                    <a href="https://www.instagram.com/p/C6SiMyKAT2v/" target="_blank"><i
-                            class="bi bi-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/shaquille-neil-b84a11285/" target="_blank"><i
-                            class="bi bi-linkedin"></i></a>
+    </header>
+
+    <main>
+        <section class="hero reveal" id="home">
+            <div class="hero-glow"></div>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-pill"><i class="bi bi-stars"></i> Junior Software Developer</span>
+                    <p class="hero-kicker">Hello, my name is</p>
+                    <h1>Shaquille Osborne Neil</h1>
+                    <div class="text-3">I am a <span>junior web developer</span></div>
+                    <p class="hero-subtext">Junior Full-Stack Developer specializing in React, Node.js, Swift, and Kotlin for web and mobile applications.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Work <i class="bi bi-arrow-right"></i></a>
+                        <a href="Docs/ShaquilleONeilCV.pdf" download="Shaquille's Resume" class="btn btn-secondary">Download CV</a>
+                    </div>
+                    <div class="socials">
+                        <a href="https://github.com/ShaquilleNeil" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/shaquille-neil-b84a11285/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                        <a href="https://www.instagram.com/p/C6SiMyKAT2v/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i> Instagram</a>
+                    </div>
                 </div>
-                <a href="Docs/ShaquilleONeilCV.pdf" download="Shaquille's Resume">DOWNLOAD CV</a>
-                <a href="#contact">CONTACT ME</a>
+                <aside class="hero-media">
+                    <img src="image/me.png" class="profile" alt="Shaquille Neil profile">
+                    <div class="status-card">
+                        <ion-icon name="flash-outline"></ion-icon>
+                        <div><p class="status-label">Current Focus</p><p class="status-value">Building scalable apps</p></div>
+                    </div>
+                </aside>
             </div>
-
-
-            <img src="image/me.png" class="profile">
-        </div>
-
-
-
-
-
-    </section>
-
-
-
-    <!-- Services -->
-    <section class="services" id="services">
-        <h1 class="title">Skills</h1>
-        <div class="max-width">
-
-
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/html.png" height="50px" width="50px">
-                        <div class="text">HTML</div>
-
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/css.png" height="50px" width="50px">
-                        <div class="text">CSS</div>
-
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/js.png" height="50px" width="50px">
-                        <div class="text">JS</div>
-
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/java.png" height="50px" width="50px">
-                        <div class="text">Java</div>
-
-
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/swift.png" height="50px" width="50px">
-                        <div class="text">Swift</div>
-
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/node.png" height="50px" width="50px">
-                        <div class="text">NodeJS</div>
-
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/php.png" height="50px" width="50px">
-                        <div class="text">PHP</div>
-
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/android.png" height="50px" width="50px">
-                        <div class="text">Android</div>
-
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/react.png" height="50px" width="50px">
-                        <div class="text">React</div>
-
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/c.png" height="50px" width="50px">
-                        <div class="text">C</div>
-
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/pythom.png" height="50px" width="50px">
-                        <div class="text">Python</div>
-
-
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/git.png" height="50px" width="50px">
-                        <div class="text">Git</div>
-
-
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/firebase.png" height="50px" width="50px">
-                        <div class="text">Firebase</div>
-
-
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/sql.png" height="50px" width="50px">
-                        <div class="text">SQL</div>
-
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/mongo.png" height="50px" width="50px">
-                        <div class="text">MongoDB</div>
-
-
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/kotlin.png" height="50px" width="50px">
-                        <div class="text">Kotlin</div>
-
-
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <div class="box"></div>
-                    <div class="text">
-                        <img src="image/reactNative.png" height="50px" width="50px">
-                        <div class="text">React Native</div>
-
-
-                    </div>
-                </div>
-
-
-
+        </section>
+
+        <section class="impact-strip reveal">
+            <div class="impact-grid">
+                <article class="impact-card"><i class="bi bi-cpu"></i><p>Building full-stack and mobile products with clean, scalable architecture.</p></article>
+                <article class="impact-card"><i class="bi bi-lightning-charge"></i><p>Focused on practical automation and faster workflows with measurable impact.</p></article>
+                <article class="impact-card"><i class="bi bi-layers"></i><p>Shipping across web, backend, and native mobile with consistent UX quality.</p></article>
+                <article class="impact-card"><i class="bi bi-terminal"></i><p>Hands-on with React, Node.js, Swift, Kotlin, Firebase, and modern tooling.</p></article>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-
-    <section id="projects">
-        <div class="container">
-            <h1 class="title">Projects</h1>
-            <div class="projects-grid">
-                <div class="carousel owl-carousel">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/lienco3.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">LienCo Construction website</h3>
-                            <p class="project-tech">ReactJS | FireBase</p>
-                            <button class="visit-button"><a href="https://shaquilleneil.github.io/Lienco4/"
-                                    target="_blank">Demo <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
-                            <p class="project-desc">Interactive construction company website</p>
-                        </div>
-                        <div class="project-media">
-                            <img src="image/Screenshot 2025-09-07 162038.png" alt="LienCo" class="project-image">
-                        </div>
-
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/icons8-clock-512.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">Clock</h3>
-                            <p class="project-tech">HTML | CSS | JavaScript </p>
-                            <button class="visit-button"><a href="https://shaquilleneil.github.io/Functional-Clock/"
-                                    target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
-                            <p class="project-desc"> A Simple Functional Clock</p>
-                        </div>
-                        <div class="project-media">
-                            <img src="image/Screenshot 2025-09-08 230743.png" alt="Clock" class="project-image">
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/android.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">The Chair</h3>
-                            <p class="project-tech">Java | Firebase</p>
-                            <button class="visit-button"><a href="https://github.com/ShaquilleNeil/TheChair.git"
-                                    target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
-                            <p class="project-desc"> An android app that allows users to find, book and review local haircare professionals</p>
-                        </div>
-                        <div class="project-media">
-                            <img src="image/TheChair.png" alt="The Chair" class="project-image">
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/icons8-clock-512.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">BrickBasket</h3>
-                            <p class="project-tech">HTML | CSS | JavaScript | Firebase | React </p>
-                            <button class="visit-button">In Progress</button>
-                            <p class="project-desc"> A construction material delivery website that allows users to place, track and pay for orders</p>
-                        </div>
-                        <div class="project-media">
-                            <img src="image/Homepage.png" alt="BrickBasket" class="project-image">
-                        </div>
-                    </div>
-
-                    
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/apple.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">PlugTrade</h3>
-                            <p class="project-tech">Swift | Firebase</p>
-                            <button class="visit-button"><a
-                                href="https://github.com/ShaquilleNeil/PlugTradeV2.git" target="_blank">Visit
-                                <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
-                            <p class="project-desc"> PlugTrade is a SwiftUI marketplace app where users can list electronics, browse items by category,
-                                add products to a cart, and negotiate real-time trade deals.</p>
-                        </div>
-                        <div class="project-media">
-                            <img src="./image/Homeplug.png" alt="PlugTrade" class="project-image">
-                        </div>
-                    </div>
-
-
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/linkedin.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">LinkedIn Clone(Mock up)</h3>
-                            <p class="project-tech">Xcode | Swift </p>
-                            <button class="visit-button"><a
-                                    href="https://github.com/ShaquilleNeil/LinkedIn_Clone_IOS.git" target="_blank">Visit
-                                    <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
-                            <p class="project-desc"> A clone of LinkedIn, mock up only, no login or backend features
-                                have been added</p>
-                        </div>
-                        <div class="project-media">
-                            <video class="project-image project-video" autoplay muted loop controls>
-                                <source src="image/Simulator Screen Recording - iPhone 16 Pro - 2025-10-08 at 10.19.15.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/linkedin.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">WeatherApp</h3>
-                            <p class="project-tech">React Native </p>
-                            <button class="visit-button"><a
-                                    href="https://github.com/ShaquilleNeil/MyCodeBrain.git" target="_blank">Visit
-                                    <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
-                            <p class="project-desc"> Developed a weather app in React Native using the OpenWeather API, featuring location-based weather, city search with error handling, dynamic UI updates, and smooth loading states.</p>
-                        </div>
-                        <div class="project-media">
-                            <video class="project-image project-video" autoplay muted loop controls>
-                                <source src="image/0323.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                  
-
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/icons8-clock-512.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">Dyade Space</h3>
-                            <p class="project-tech">Kotlin| Android Studio </p>
-                            <button class="visit-button"><a href="https://github.com/ShaquilleNeil/DyadeSpace.git"
-                                    target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
-                            <p class="project-desc"> DyadeSpace is an employee and project management system where managers can create projects, define tasks, and assign those tasks to one or more employees.</p>
-                        </div>
-                        <div class="project-media">
-                            <video class="project-image project-video" autoplay muted loop controls>
-                                <source src="image/Screen Recording 2026-02-20 at 5.16.43 PM.mov" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/icons8-calculator-512.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">Ios Calculator</h3>
-                            <p class="project-tech">Xcode | Swift</p>
-                            <button class="visit-button"><a href="https://github.com/ShaquilleNeil/Ios_Calculator"
-                                    target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
-                            <p class="project-desc"> A Simple Calculator made in Xcode</p>
-                        </div>
-                        <div class="project-media">
-                            <video class="project-image project-video" autoplay muted loop controls>
-                                <source src="image/calc.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-info">
-                            <!-- <img src="image/android.png" alt="Icon" class="project-icon"> -->
-                            <h3 class="project-title">Dyade Management</h3>
-                            <p class="project-tech">Html | Css | Automation</p>
-                            <button class="visit-button"><a href="https://shaquilleneil.github.io/DyadeManagement/#home"
-                                    target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></button>
-                            <p class="project-desc">Dyade Management main website, includes company information, automated chatbot and CRM backend management</p>
-                        </div>
-                        <div class="project-media">
-                            <img src="image/Screenshot 2026-02-20 at 5.23.21 PM.png" alt="Game Master" class="project-image">
-                        </div>
-                    </div>
-
+        <section class="featured reveal" id="projects">
+            <div class="section-header"><p class="section-kicker">Case Study</p><h2>Featured Project</h2></div>
+            <div class="featured-grid">
+                <div class="featured-media">
+                    <video class="project-image project-video" autoplay muted loop controls>
+                        <source src="image/Screen Recording 2026-02-20 at 5.16.43 PM.mov" type="video/mp4">
+                    </video>
                 </div>
-
+                <div class="featured-info">
+                    <h3>Dyade Space</h3>
+                    <p class="featured-tech">Kotlin | Android Studio</p>
+                    <p>DyadeSpace is an employee and project management system where managers can create projects, define tasks, and assign those tasks to one or more employees.</p>
+                    <div class="tag-row"><span>Kotlin</span><span>Android</span><span>Project Management</span></div>
+                    <div class="featured-actions">
+                        <a href="https://github.com/ShaquilleNeil/DyadeSpace.git" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section class="projects reveal">
+            <div class="section-header"><p class="section-kicker">Portfolio</p><h2>Project Library</h2></div>
+            <div class="projects-controls">
+                <button class="projects-arrow projects-arrow-left" type="button" aria-label="Scroll projects left"><i class="bi bi-arrow-left"></i></button>
+                <button class="projects-arrow projects-arrow-right" type="button" aria-label="Scroll projects right"><i class="bi bi-arrow-right"></i></button>
+            </div>
+            <div class="projects-scroller">
+                <div class="projects-track">
+                    <article class="project-card reveal-child"><img src="image/Screenshot 2025-09-07 162038.png" alt="LienCo Construction website" class="project-image"><div class="project-body"><h4>LienCo Construction website</h4><p>Interactive construction company website.</p><p class="project-tech">ReactJS | FireBase</p><a href="https://shaquilleneil.github.io/Lienco4/" target="_blank" rel="noopener noreferrer">Demo <i class="bi bi-arrow-up-right-circle-fill"></i></a></div></article>
+                    <article class="project-card reveal-child"><img src="image/Screenshot 2025-09-08 230743.png" alt="Clock" class="project-image"><div class="project-body"><h4>Clock</h4><p>A simple functional clock.</p><p class="project-tech">HTML | CSS | JavaScript</p><a href="https://shaquilleneil.github.io/Functional-Clock/" target="_blank" rel="noopener noreferrer">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></div></article>
+                    <article class="project-card reveal-child"><img src="image/TheChair.png" alt="The Chair" class="project-image"><div class="project-body"><h4>The Chair</h4><p>Android app for booking and reviewing local haircare professionals.</p><p class="project-tech">Java | Firebase</p><a href="https://github.com/ShaquilleNeil/TheChair.git" target="_blank" rel="noopener noreferrer">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></div></article>
+                    <article class="project-card reveal-child"><img src="image/Homepage.png" alt="BrickBasket" class="project-image"><div class="project-body"><h4>BrickBasket</h4><p>Construction delivery platform for ordering, tracking, and payment.</p><p class="project-tech">HTML | CSS | JavaScript | Firebase | React</p><span class="in-progress">In Progress</span></div></article>
+                    <article class="project-card reveal-child"><img src="./image/Homeplug.png" alt="PlugTrade" class="project-image"><div class="project-body"><h4>PlugTrade</h4><p>SwiftUI marketplace app for electronics listings and live deal negotiations.</p><p class="project-tech">Swift | Firebase</p><a href="https://github.com/ShaquilleNeil/PlugTradeV2.git" target="_blank" rel="noopener noreferrer">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></div></article>
+                    <article class="project-card reveal-child"><video class="project-image project-video" autoplay muted loop controls><source src="image/Simulator Screen Recording - iPhone 16 Pro - 2025-10-08 at 10.19.15.mp4" type="video/mp4"></video><div class="project-body"><h4>LinkedIn Clone (Mock up)</h4><p>iOS LinkedIn clone mockup without backend features.</p><p class="project-tech">Xcode | Swift</p><a href="https://github.com/ShaquilleNeil/LinkedIn_Clone_IOS.git" target="_blank" rel="noopener noreferrer">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></div></article>
+                    <article class="project-card reveal-child"><video class="project-image project-video" autoplay muted loop controls><source src="image/0323.mp4" type="video/mp4"></video><div class="project-body"><h4>WeatherApp</h4><p>React Native weather app with location search, loading states, and error handling.</p><p class="project-tech">React Native</p><a href="https://github.com/ShaquilleNeil/MyCodeBrain.git" target="_blank" rel="noopener noreferrer">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></div></article>
+                    <article class="project-card reveal-child"><img src="image/Screenshot 2025-09-08 231620.png" alt="Simple Calculator" class="project-image"><div class="project-body"><h4>Simple Calculator</h4><p>Simple calculator built with HTML, CSS, and JS.</p><p class="project-tech">HTML | CSS | JS</p><a href="https://shaquilleneil.github.io/calcuator/" target="_blank" rel="noopener noreferrer">View <i class="bi bi-arrow-up-right-circle-fill"></i></a></div></article>
 
+                    <article class="project-card reveal-child"><video class="project-image project-video" autoplay muted loop controls><source src="image/calc.mp4" type="video/mp4"></video><div class="project-body"><h4>Ios Calculator</h4><p>A simple calculator app made in Xcode.</p><p class="project-tech">Xcode | Swift</p><a href="https://github.com/ShaquilleNeil/Ios_Calculator" target="_blank" rel="noopener noreferrer">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></div></article>
+                    <article class="project-card reveal-child"><img src="image/Screenshot 2026-02-20 at 5.23.21 PM.png" alt="Dyade Management" class="project-image"><div class="project-body"><h4>Dyade Management</h4><p>Company website with chatbot automation and CRM backend management.</p><p class="project-tech">Html | Css | Automation</p><a href="https://shaquilleneil.github.io/DyadeManagement/#home" target="_blank" rel="noopener noreferrer">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a></div></article>
+                </div>
+            </div>
+        </section>
 
+        <section class="skills reveal" id="skills">
+            <div class="section-header"><p class="section-kicker">Capabilities</p><h2>The Stack</h2></div>
+            <div class="skills-layout">
+                <div class="skills-intro">
+                    <p>Specializing in building robust digital products with a modular, performance-first approach.</p>
+                    <div class="metrics-badge"><i class="bi bi-patch-check-fill"></i><span>Focused on full-stack development and workflow automation.</span></div>
+                </div>
+                <div class="skills-groups">
+                    <div class="skill-group"><h3>Frontend</h3><div class="skill-pills"><span><i class="bi bi-filetype-html"></i>HTML</span><span><i class="bi bi-filetype-css"></i>CSS</span><span><i class="bi bi-filetype-js"></i>JavaScript</span><span><i class="bi bi-bootstrap-reboot"></i>React</span><span><i class="bi bi-phone"></i>Flutter</span></div></div>
+                    <div class="skill-group"><h3>Mobile</h3><div class="skill-pills"><span><i class="bi bi-phone"></i>Swift</span><span><i class="bi bi-android2"></i>Kotlin</span><span><i class="bi bi-android2"></i>Android</span><span><i class="bi bi-phone"></i>React Native</span></div></div>
+                    <div class="skill-group"><h3>Backend & Data</h3><div class="skill-pills"><span><i class="bi bi-diagram-3"></i>NodeJS</span><span><i class="bi bi-filetype-php"></i>PHP</span><span><i class="bi bi-fire"></i>Firebase</span><span><i class="bi bi-database"></i>SQL</span><span><i class="bi bi-hdd-network"></i>MongoDB</span><span><i class="bi bi-cup-hot"></i>Java</span><span><i class="bi bi-c-circle"></i>C</span><span><i class="bi bi-filetype-py"></i>Python</span></div></div>
+                    <div class="skill-group"><h3>Tools</h3><div class="skill-pills"><span><i class="bi bi-git"></i>Git</span></div></div>
+                </div>
+            </div>
+        </section>
 
+        <section class="experience reveal" id="experience">
+            <div class="section-header"><p class="section-kicker">Journey</p><h2>Experience Highlights</h2></div>
+            <div class="timeline">
+                <article class="timeline-card">
+                    <h3>DBtronics | Jan 2026 - Present</h3>
+                    <p>Software Developer Intern</p>
+                    <ul>
+                        <li>Built automated booking and lead management workflows using GoHighLevel and CRM integrations, reducing manual workload by 40%+.</li>
+                        <li>Developed AI-powered chatbot agents, enabling intelligent lead capture, qualification, and automated scheduling.</li>
+                        <li>Designed conversational workflows with intent-based logic and contextual responses, reducing response time to under 2 minutes and increasing user engagement.</li>
+                        <li>Optimized lead conversion workflows through automation and CRM follow-up sequencing.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
-    <section class="contact" id="contact">
-        <h2 class="title">Contact</h2>
-        <div class="max-width">
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
+        <section class="contact reveal" id="contact">
+            <div class="contact-layout">
+                <div class="contact-left">
+                    <h2>Let's build something impactful.</h2>
                     <p>I strive daily for nothing short of excellence in the field of software development.</p>
-                    <div class="icons">
-                        <div class="row">
-                            <ion-icon name="person-outline"></ion-icon>
-                            <div class="info">
-                                <div class="head">Name:</div>
-                                <div class="sub-title">Shaquille Osborne Neil</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <ion-icon name="earth-outline"></ion-icon>
-                            <div class="info">
-                                <div class="head">Address:</div>
-                                <div class="sub-title">Montreal, Canada</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <ion-icon name="mail-outline"></ion-icon>
-                            <div class="info">
-                                <div class="head">Email:</div>
-                                <div class="sub-title">Shaquille-36@hotmail.com</div>
-                            </div>
-                        </div>
+                    <div class="contact-points">
+                        <div><ion-icon name="person-outline"></ion-icon><span>Shaquille Osborne Neil</span></div>
+                        <div><ion-icon name="earth-outline"></ion-icon><span>Montreal, Canada</span></div>
+                        <div><ion-icon name="mail-outline"></ion-icon><span>Shaquille-36@hotmail.com</span></div>
                     </div>
                 </div>
-                <div class="column-right">
-                    <div class="text">Message me</div>
+                <div class="contact-form-wrap">
                     <form id="contact-form">
                         <div class="fields">
-                            <div class="field">
-                                <input id="name" type="text" placeholder="Your first name" required>
-                                <div class="error" id="nameerror"></div>
-                            </div>
-                            <div class="field">
-                                <input id="surname" type="text" placeholder="Your surname" required>
-                                <div class="error" id="surnameerror"></div>
-                            </div>
+                            <div class="field"><label for="name">First name</label><input id="name" type="text" placeholder="Your first name" required><div class="error" id="nameerror"></div></div>
+                            <div class="field"><label for="surname">Surname</label><input id="surname" type="text" placeholder="Your surname" required><div class="error" id="surnameerror"></div></div>
                         </div>
-                        <div class="field">
-                            <input id="email" type="email" placeholder="Your email" required>
-                            <div class="error" id="emailerror"></div>
-                        </div>
-                        <div class="field textarea">
-                            <textarea id="message" cols="30" rows="10" placeholder="Write your message here"
-                                required></textarea>
-                            <div class="error" id="messageerror"></div>
-                        </div>
-                        <div class="button">
-                            <button type="submit">Send Message</button>
-                        </div>
+                        <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="Your email" required><div class="error" id="emailerror"></div></div>
+                        <div class="field textarea"><label for="message">Message</label><textarea id="message" cols="30" rows="7" placeholder="Write your message here" required></textarea><div class="error" id="messageerror"></div></div>
+                        <div class="button"><button type="submit">Send Message</button></div>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- <div class="success-message" id="success-message">
-        <ion-icon name="checkmark-circle"></ion-icon> Message sent successfully!
-    </div> -->
+    <footer>Created by <span><a>Shaquille Neil</a></span> | All rights reserved</footer>
+    <button class="scroll-up-btn" title="Go to top"><ion-icon name="caret-up-outline"></ion-icon></button>
 
-    <footer>
-        Created by <span><a>Shaquille Neil</a></span> | All rights reserved
-    </footer>
-
-    <button class="scroll-up-btn" title="Go to top">
-        <ion-icon name="caret-up-outline"></ion-icon>
-    </button>
+    <div id="lightbox-modal" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Expanded project preview">
+    </div>
 
     <script>
         $(document).ready(function () {
-            // Mobile menu toggle
-            $('.menu-btn').click(function () {
-                $('.menu').toggleClass('active');
-                $('.menu-btn').toggleClass('active');
-            });
+            $('.menu-btn').click(function () { $('.menu').toggleClass('active'); });
+            $(window).scroll(function () { $('.scroll-up-btn').toggleClass('show', $(this).scrollTop() > 100); });
+            $('.scroll-up-btn').click(function () { $('html, body').animate({ scrollTop: 0 }, 700); });
 
-            // Scroll to top button
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('.scroll-up-btn').addClass('show');
-                } else {
-                    $('.scroll-up-btn').removeClass('show');
-                }
-            });
-
-            $('.scroll-up-btn').click(function () {
-                $('html, body').animate({ scrollTop: 0 }, 800);
-            });
-
-            // Smooth scrolling for menu links
             $('a[href*="#"]').on('click', function (e) {
-                $('html, body').animate({
-                    scrollTop: $($(this).attr('href')).offset().top
-                }, 500);
-                e.preventDefault();
-            });
-
-            // Dark mode toggle
-            $('#dark-mode-toggle').click(function (e) {
-                e.preventDefault();
-                $('body').toggleClass('dark-mode');
-
-                if ($('body').hasClass('dark-mode')) {
-                    $('#dark-mode-icon').attr('src', './image/moon-outline.svg').attr('alt', 'Dark mode');
-                } else {
-                    $('#dark-mode-icon').attr('src', './image/sunny-outline.svg').attr('alt', 'Light mode');
+                const target = $($(this).attr('href'));
+                if (target.length) {
+                    $('html, body').animate({ scrollTop: target.offset().top - 75 }, 500);
+                    e.preventDefault();
+                    $('.menu').removeClass('active');
                 }
             });
 
-            // Initialize Owl Carousel
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: false,
-                dots: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 3
-                    }
-                }
-            });
-
-            // Form validation and submission
             $('#contact-form').on('submit', function (e) {
                 e.preventDefault();
-
-                // Reset errors
                 $('.error').text('');
-
                 let isValid = true;
-
-                // Validate name
                 const name = $('#name').val().trim();
-                if (name === '') {
-                    $('#nameerror').text('First name is required');
-                    isValid = false;
-                }
-
-                // Validate surname
                 const surname = $('#surname').val().trim();
-                if (surname === '') {
-                    $('#surnameerror').text('Surname is required');
-                    isValid = false;
-                }
-
-                // Validate email
                 const email = $('#email').val().trim();
-                if (email === '') {
-                    $('#emailerror').text('Email is required');
-                    isValid = false;
-                } else if (!isValidEmail(email)) {
-                    $('#emailerror').text('Please enter a valid email address');
-                    isValid = false;
-                }
-
-                // Validate message
                 const message = $('#message').val().trim();
-                if (message === '') {
-                    $('#messageerror').text('Message is required');
-                    isValid = false;
-                }
+
+                if (!name) { $('#nameerror').text('First name is required'); isValid = false; }
+                if (!surname) { $('#surnameerror').text('Surname is required'); isValid = false; }
+                if (!email) { $('#emailerror').text('Email is required'); isValid = false; }
+                else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { $('#emailerror').text('Please enter a valid email address'); isValid = false; }
+                if (!message) { $('#messageerror').text('Message is required'); isValid = false; }
 
                 if (isValid) {
-                    // Prepare email parameters - FIXED to match your template variables
-                    const templateParams = {
-                        name: name + ' ' + surname,
-                        email: email,
-                        message: message,
-                        time: new Date().toLocaleString()
-                    };
-
-                    console.log('Sending email with params:', templateParams);
-
-                    // Send email using EmailJS - UPDATE THESE VALUES WITH YOUR ACTUAL IDs
-                    emailjs.send("service_y6eazdo", "template_ub1t1gu", templateParams)
-                        .then(function (response) {
-                            console.log('SUCCESS!', response.status, response.text);
-                            showSuccessMessage();
-                            alert('Message sent successfully!');
-                            $('#contact-form')[0].reset();
-                        }, function (error) {
-                            console.log('FAILED...', error);
-                            alert('Failed to send message. Please try again later.');
-                        });
+                    const templateParams = { name: name + ' ' + surname, email: email, message: message, time: new Date().toLocaleString() };
+                    emailjs.send("service_y6eazdo", "template_ub1t1gu", templateParams).then(
+                        function () { alert('Message sent successfully!'); $('#contact-form')[0].reset(); },
+                        function () { alert('Failed to send message. Please try again later.'); }
+                    );
                 }
             });
 
-            // Email validation function
-            function isValidEmail(email) {
-                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return re.test(email);
-            }
-
-            // Show success message
-            function showSuccessMessage() {
-                const successMsg = $('#success-message');
-                successMsg.addClass('show');
-
-                setTimeout(function () {
-                    successMsg.removeClass('show');
-                }, 3000);
-            }
-
-            // // For testing without actual EmailJS account
-            // function sendTestEmail(params) {
-            //     console.log('Test email would be sent with:', params);
-            //     showSuccessMessage();
-            //     $('#contact-form')[0].reset();
-            // }
-        });
-    </script>
-
-
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const modal = document.getElementById("lightbox-modal");
-          const modalImg = document.getElementById("lightbox-img");
-          const closeBtn = document.querySelector(".lightbox-close");
-      
-          document.querySelectorAll(".project-image").forEach(img => {
-            img.addEventListener("click", function () {
-              modal.style.display = "block";
-              modalImg.src = this.src;
+            const modal = document.getElementById("lightbox-modal");
+            const modalImg = document.getElementById("lightbox-img");
+            const closeBtn = document.querySelector(".lightbox-close");
+            document.querySelectorAll(".project-image").forEach((img) => {
+                img.addEventListener("click", function () {
+                    if (this.tagName.toLowerCase() === 'img') {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                    }
+                });
             });
-          });
-      
-          closeBtn.addEventListener("click", function () {
-            modal.style.display = "none";
-          });
-      
-          modal.addEventListener("click", function (e) {
-            if (e.target === modal) {
-              modal.style.display = "none";
+            closeBtn.addEventListener("click", function () { modal.style.display = "none"; });
+            modal.addEventListener("click", function (e) { if (e.target === modal) modal.style.display = "none"; });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.15 });
+            document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+            document.querySelectorAll('.reveal-child').forEach((el, idx) => { el.style.transitionDelay = (idx % 5) * 70 + 'ms'; observer.observe(el); });
+
+            const scroller = document.querySelector('.projects-scroller');
+            const leftArrow = document.querySelector('.projects-arrow-left');
+            const rightArrow = document.querySelector('.projects-arrow-right');
+            const scrollAmount = 420;
+            if (scroller && leftArrow && rightArrow) {
+                leftArrow.addEventListener('click', function () {
+                    scroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+                rightArrow.addEventListener('click', function () {
+                    scroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+
+                let isDragging = false;
+                let startX = 0;
+                let startScrollLeft = 0;
+                let moved = false;
+
+                scroller.addEventListener('mousedown', function (e) {
+                    isDragging = true;
+                    moved = false;
+                    scroller.classList.add('dragging');
+                    startX = e.pageX - scroller.offsetLeft;
+                    startScrollLeft = scroller.scrollLeft;
+                });
+
+                scroller.addEventListener('mouseleave', function () {
+                    isDragging = false;
+                    scroller.classList.remove('dragging');
+                });
+
+                scroller.addEventListener('mouseup', function () {
+                    isDragging = false;
+                    scroller.classList.remove('dragging');
+                });
+
+                scroller.addEventListener('mousemove', function (e) {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                    moved = true;
+                    const x = e.pageX - scroller.offsetLeft;
+                    const walk = (x - startX) * 1.2;
+                    scroller.scrollLeft = startScrollLeft - walk;
+                });
+
+                scroller.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', function (e) {
+                        if (moved) e.preventDefault();
+                    });
+                });
             }
-          });
         });
-      </script>
-      
-
-    <!-- Lightbox Modal -->
-<div id="lightbox-modal" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-</div>
-
-
+    </script>
 </body>
-
 </html>
