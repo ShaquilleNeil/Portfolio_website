@@ -731,107 +731,27 @@ h2 {
     background: rgba(255, 179, 181, 0.55);
 }
 
-.timeline-details {
-    background: var(--surface);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-left: 3px solid rgba(255, 179, 181, 0.45);
-    border-radius: var(--radius-md);
-    padding: 0 var(--space-4);
-    transition: border-color 0.35s var(--ease-expo), box-shadow 0.35s var(--ease-expo);
+.timeline-card {
+    border-left: 1px solid rgba(255, 179, 181, 0.3);
+    padding-left: var(--space-4);
 }
 
-.timeline-details[open] {
-    box-shadow: var(--glow);
-    border-color: rgba(255, 255, 255, 0.1);
-    border-left-color: var(--accent-light);
-}
-
-.timeline-summary {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--space-3);
-    cursor: pointer;
-    list-style: none;
-    padding: var(--space-4) 0;
-}
-
-.timeline-summary::-webkit-details-marker {
-    display: none;
-}
-
-.timeline-summary:focus-visible {
-    outline: 2px solid var(--outline);
-    outline-offset: 4px;
-    border-radius: var(--radius-sm);
-}
-
-.timeline-summary-text {
-    min-width: 0;
-    flex: 1;
-}
-
-.timeline-title {
+.timeline-card h3 {
     font-size: 1.65rem;
-    margin-bottom: 0.45rem;
-    line-height: 1.25;
-    transition: color 0.25s ease;
+    margin-bottom: 0.65rem;
 }
 
-.timeline-summary:hover .timeline-title {
-    color: var(--accent-light);
-}
-
-.timeline-role {
+.timeline-card > p {
     color: var(--text-muted);
-    font-size: 0.95rem;
-    margin: 0;
+    margin-bottom: var(--space-3);
 }
 
-.timeline-chevron-wrap {
-    flex-shrink: 0;
-    width: 2.25rem;
-    height: 2.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-sm);
-    background: rgba(255, 179, 181, 0.1);
-    color: var(--accent-light);
-    font-size: 1.1rem;
-    transition: transform 0.4s var(--ease-expo), background 0.25s ease;
-}
-
-.timeline-details[open] .timeline-chevron-wrap {
-    transform: rotate(180deg);
-    background: rgba(122, 28, 46, 0.45);
-}
-
-.timeline-panel {
-    padding-bottom: var(--space-4);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    padding-top: var(--space-3);
-    animation: timeline-panel-in 0.4s var(--ease-expo);
-}
-
-@keyframes timeline-panel-in {
-    from {
-        opacity: 0;
-        transform: translateY(-6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.timeline-panel ul {
+.timeline-card ul {
     color: #d4d0cf;
     padding-left: var(--space-3);
-    margin: 0;
 }
 
-.timeline-panel li + li {
+.timeline-card li + li {
     margin-top: 0.55rem;
 }
 
