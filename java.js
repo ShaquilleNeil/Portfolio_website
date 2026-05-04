@@ -16,14 +16,18 @@
 //     });})
 document.addEventListener('DOMContentLoaded', function() {
     var options = {
-        strings: ["LaSalle College Student Developer", "Junior Software Developer"],
-        typeSpeed: 100,
-        backSpeed: 100,  
-        backDelay: 1500,
-        loop: true
+        strings: ["GHL Automation Specialist", "Full-Stack Developer", "Workflow Designer"],
+        typeSpeed: 55,
+        backSpeed: 40,
+        backDelay: 1800,
+        loop: true,
+        smartBackspace: true
     };
- 
-    var typed = new Typed(".text-3 span", options);
+
+    var typedEl = document.querySelector(".typed-hero");
+    if (typedEl && typeof Typed !== "undefined") {
+        new Typed(".typed-hero", options);
+    }
 });
  
 window.addEventListener('scroll', function() {
