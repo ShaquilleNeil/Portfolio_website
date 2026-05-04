@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leave a Review — Shaquille Neil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d0608;
+      --bg2:       #120a0c;
+      --bg3:       #1a0e11;
+      --surface:   #1e1215;
+      --border:    #2a1a1e;
+      --accent:    #c0392b;
+      --accent2:   #e74c3c;
+      --accent-dim: rgba(192, 57, 43, 0.12);
+      --text:      #f0e8e9;
+      --text-muted:#9a8a8c;
+      --text-dim:  #5a4a4c;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(192, 57, 43, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 32px;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span { color: var(--accent2); }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #8b0000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #fff;
+      margin: 0 auto 20px;
+      border: 2px solid var(--border);
+    }
+
+    .page-header h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+
+    .page-header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 400px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* ── Card ── */
+    .form-card {
+      width: 100%;
+      max-width: 560px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px 44px;
+      animation: fadeUp 0.5s ease 0.1s both;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), transparent);
+    }
+
+    /* ── Form Elements ── */
+    .form-group { margin-bottom: 22px; }
+
+    .form-label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.95rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: var(--text-dim); }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 130px;
+      line-height: 1.6;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    /* ── Star Rating ── */
+    .star-rating {
+      display: flex;
+      gap: 6px;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    .star-rating input { display: none; }
+
+    .star-rating label {
+      font-size: 2.2rem;
+      color: var(--border);
+      cursor: pointer;
+      transition: color 0.15s, transform 0.15s;
+      line-height: 1;
+    }
+
+    .star-rating label:hover { transform: scale(1.15); }
+
+    .star-rating label:hover,
+    .star-rating label:hover ~ label,
+    .star-rating input:checked ~ label {
+      color: var(--accent2);
+    }
+
+    .star-hint {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-top: 8px;
+      height: 16px;
+      transition: opacity 0.2s;
+    }
+
+    /* ── Project type chips ── */
+    .chip-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+      user-select: none;
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .chip:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    .chip.active {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent2);
+      font-weight: 600;
+    }
+
+    /* ── Submit ── */
+    .form-submit {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .form-submit:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+    }
+
+    .form-submit:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-notice {
+      font-size: 0.76rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+
+    /* ── Error ── */
+    .field-error {
+      font-size: 0.78rem;
+      color: var(--accent2);
+      margin-top: 6px;
+      display: none;
+    }
+
+    .form-input.error,
+    .form-textarea.error {
+      border-color: var(--accent2);
+    }
+
+    /* ── Success ── */
+    .success-screen {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+      animation: fadeUp 0.4s ease forwards;
+    }
+
+    .success-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .success-screen h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .success-screen p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .success-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent2);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(192, 57, 43, 0.3);
+      padding: 12px 22px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .success-back:hover { background: var(--accent-dim); }
+
+    /* ── Footer ── */
+    .page-footer {
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      text-align: center;
+      animation: fadeUp 0.5s ease 0.2s both;
+    }
+
+    .page-footer a {
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .page-footer a:hover { color: var(--accent2); }
+
+    /* ── Animation ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .form-card { padding: 32px 24px; }
+      .form-row  { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <a href="freelance.html" class="brand">Shaquille<span>.dev</span></a>
+    <div class="avatar">SN</div>
+    <h1>How was your experience?</h1>
+    <p>Worked with Shaquille on a GHL or automation project? Your honest feedback helps other clients make informed decisions.</p>
+  </div>
+
+  <div class="form-card">
+
+    <!-- Form -->
+    <div id="reviewForm">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="rName">Your Name *</label>
+          <input class="form-input" type="text" id="rName" placeholder="Jane Smith" autocomplete="name" />
+          <div class="field-error" id="rNameErr">Please enter your name</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="rRole">Role / Company *</label>
+          <input class="form-input" type="text" id="rRole" placeholder="Owner · Acme Corp" />
+          <div class="field-error" id="rRoleErr">Please enter your role</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Project Type</label>
+        <div class="chip-group" id="chipGroup">
+          <button type="button" class="chip" data-value="GHL Full Setup">GHL Full Setup</button>
+          <button type="button" class="chip" data-value="Workflow Build">Workflow Build</button>
+          <button type="button" class="chip" data-value="SMS/Email Campaign">SMS/Email Campaign</button>
+          <button type="button" class="chip" data-value="Monthly Management">Monthly Management</button>
+          <button type="button" class="chip" data-value="Other">Other</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Your Rating *</label>
+        <div class="star-rating" id="starRating">
+          <input type="radio" name="rating" id="s5" value="5"><label for="s5" title="Excellent">★</label>
+          <input type="radio" name="rating" id="s4" value="4"><label for="s4" title="Good">★</label>
+          <input type="radio" name="rating" id="s3" value="3"><label for="s3" title="Average">★</label>
+          <input type="radio" name="rating" id="s2" value="2"><label for="s2" title="Poor">★</label>
+          <input type="radio" name="rating" id="s1" value="1"><label for="s1" title="Terrible">★</label>
+        </div>
+        <div class="star-hint" id="starHint"></div>
+        <div class="field-error" id="rRatingErr">Please select a rating</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="rText">Your Review *</label>
+        <textarea class="form-textarea" id="rText" placeholder="What was the project? What did Shaquille deliver? Would you recommend working with him?"></textarea>
+        <div class="field-error" id="rTextErr">Please write a short review</div>
+      </div>
+
+      <button class="form-submit" id="submitBtn" onclick="submitReview()">
+        Submit Review →
+      </button>
+
+      <p class="form-notice">
+        🔒 Reviews are verified before appearing publicly.<br>Your email is never required or stored.
+      </p>
+
+    </div>
+
+    <!-- Success -->
+    <div class="success-screen" id="successScreen">
+      <span class="success-icon">🙌</span>
+      <h2>Thanks for the review!</h2>
+      <p>Your feedback has been submitted and will appear on the page once verified. This usually takes less than 24 hours.</p>
+      <a href="freelance.html" class="success-back">← Back to Services</a>
+    </div>
+
+  </div>
+
+  <div class="page-footer">
+    <a href="freelance.html">← Back to Shaquille.dev</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:Shaquille-36@hotmail.com">Contact</a>
+  </div>
+
+  <script>
+    // ── Chip selection ──
+    let selectedProjectType = '';
+
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        selectedProjectType = chip.dataset.value;
+      });
+    });
+
+    // ── Star hints ──
+    const hints = { 5: 'Excellent', 4: 'Good', 3: 'Average', 2: 'Poor', 1: 'Terrible' };
+    document.querySelectorAll('.star-rating label').forEach(label => {
+      label.addEventListener('mouseenter', () => {
+        const val = label.getAttribute('for').replace('s', '');
+        document.getElementById('starHint').textContent = hints[val] || '';
+      });
+      label.addEventListener('mouseleave', () => {
+        const checked = document.querySelector('input[name="rating"]:checked');
+        document.getElementById('starHint').textContent = checked ? hints[checked.value] : '';
+      });
+    });
+
+    document.querySelectorAll('input[name="rating"]').forEach(input => {
+      input.addEventListener('change', () => {
+        document.getElementById('starHint').textContent = hints[input.value] || '';
+        document.getElementById('rRatingErr').style.display = 'none';
+      });
+    });
+
+    // ── Validation ──
+    function validate() {
+      let valid = true;
+
+      const name = document.getElementById('rName');
+      const role = document.getElementById('rRole');
+      const text = document.getElementById('rText');
+      const rating = document.querySelector('input[name="rating"]:checked');
+
+      [name, role, text].forEach(el => el.classList.remove('error'));
+
+      if (!name.value.trim()) {
+        name.classList.add('error');
+        document.getElementById('rNameErr').style.display = 'block';
+        valid = false;
+      } else {
+        document.getElementById('rNameErr').style.display = 'none';
+      }
+
+      if (!role.value.trim()) {
+        role.classList.add('error');
+        document.getElementById('rRoleErr').style.display = 'block';
+        valid = false;
+      } else {
+        document.getElementById('rRoleErr').style.display = 'none';
+      }
+
+      if (!rating) {
+        document.getElementById('rRatingErr').style.display = 'block';
+        valid = false;
+      } else {
+        document.getElementById('rRatingErr').style.display = 'none';
+      }
+
+      if (text.value.trim().length < 20) {
+        text.classList.add('error');
+        document.getElementById('rTextErr').style.display = 'block';
+        valid = false;
+      } else {
+        document.getElementById('rTextErr').style.display = 'none';
+      }
+
+      return valid;
+    }
+
+    // ── Submit ──
+    function submitReview() {
+      if (!validate()) return;
+
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+
+      const review = {
+        id:          Date.now(),
+        name:        document.getElementById('rName').value.trim(),
+        role:        document.getElementById('rRole').value.trim(),
+        text:        document.getElementById('rText').value.trim(),
+        rating:      parseInt(document.querySelector('input[name="rating"]:checked').value),
+        projectType: selectedProjectType,
+        submittedAt: new Date().toISOString()
+      };
+
+      // Save to pending in localStorage
+      const PENDING_KEY = 'pending_reviews';
+      try {
+        const pending = JSON.parse(localStorage.getItem(PENDING_KEY)) || [];
+        pending.push(review);
+        localStorage.setItem(PENDING_KEY, JSON.stringify(pending));
+      } catch(e) {}
+
+      // Email notification
+      const subject = encodeURIComponent('⭐ New Review — Shaquille.dev');
+      const body = encodeURIComponent(
+        `New ${review.rating}-star review submitted\n\n` +
+        `From: ${review.name}\n` +
+        `Role: ${review.role}\n` +
+        `Project: ${review.projectType || 'Not specified'}\n` +
+        `Rating: ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}\n\n` +
+        `Review:\n"${review.text}"\n\n` +
+        `---\n` +
+        `To approve: open freelance.html in browser → F12 console → approveReview(index)\n` +
+        `To see all pending: getPendingReviews()`
+      );
+
+      setTimeout(() => {
+        window.location.href = `mailto:Shaquille-36@hotmail.com?subject=${subject}&body=${body}`;
+      }, 300);
+
+      // Show success
+      setTimeout(() => {
+        document.getElementById('reviewForm').style.display   = 'none';
+        document.getElementById('successScreen').style.display = 'block';
+      }, 600);
+    }
+  </script>
+
+</body>
+</html>
