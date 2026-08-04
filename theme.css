@@ -1,33 +1,39 @@
 :root {
-  /* Base surfaces */
-  --bg: #0B0F1A;
-  --bg-low: #070A12;
-  --bg2: #0F1420;
-  --bg3: #141A2C;
-  --surface: #161C2C;
-  --surface-high: #1F2740;
-  --surface-highest: #2B3550;
-  --border: #2A3350;
+  /* Paper surfaces */
+  --bg: #FAF8F4;
+  --bg-low: #F1ECE0;
+  --bg2: #F1ECE0;
+  --bg3: #EAE3D3;
+  --surface: #FFFFFF;
+  --surface-high: #FFFDF7;
+  --surface-highest: #F1ECE0;
+  --border: #DFDACD;
 
-  /* Text */
-  --text: #F2EFE6;
-  --text-muted: #B9B6AC;
-  --text-dim: #6E6A5E;
+  /* Ink text */
+  --text: #161C2C;
+  --text-muted: #4A5164;
+  --text-dim: #8A8F9C;
 
-  /* Accent (unified gold, replaces burgundy + brick red) */
+  /* Gold accent */
   --accent: #B8912F;
-  --accent-light: #E8D9AF;
+  --accent-light: #E8D9AF;   /* for BACKGROUND/fill use only — see step 3 */
+  --accent-deep: #8A6D22;    /* for TEXT use on light backgrounds — see step 3 */
   --accent2: #C9A227;
-  --accent-dim: rgba(184, 145, 47, 0.15);
-  --outline: rgba(232, 217, 175, 0.18);
-  --glow: 0 0 40px rgba(184, 145, 47, 0.24);
-
-  /* Dark text for use ON solid accent backgrounds (contrast fix — gold is
-     too light for white text the way the old reds were dark enough for it) */
+  --accent-dim: rgba(184, 145, 47, 0.12);
+  --outline: rgba(184, 145, 47, 0.35);
+  --glow: 0 0 30px rgba(184, 145, 47, 0.15);
   --text-on-accent: #14181F;
 
-  /* Status colors — kept distinct from brand accent, just tokenized */
+  /* Status colors, darkened slightly for legibility on light paper */
   --status-success: #2F8F5B;
-  --status-progress: #D9A441;
-  --status-error: #E4574C;
+  --status-progress: #B8791A;
+  --status-error: #C0392B;
+
+  /* Dark navy panels — used ONLY for nav, footer/contact, and badges/pills,
+     per step 4 below. Not the page background. */
+  --panel-dark: #161C2C;
+  --panel-dark-2: #1F2740;
+  --panel-text: #F2EFE6;
+  --panel-text-muted: #C6C2B4;
+  --panel-border: rgba(242, 239, 230, 0.16);
 }

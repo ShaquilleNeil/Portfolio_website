@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    background: radial-gradient(circle at 80% 20%, rgba(184, 145, 47, 0.18), transparent 40%), var(--bg);
+    background: radial-gradient(circle at 80% 20%, rgba(184, 145, 47, 0.09), transparent 40%), var(--bg);
     color: var(--text);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -52,7 +52,7 @@ section {
 }
 
 .section-kicker {
-    color: var(--accent-light);
+    color: var(--accent-deep);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 0.72rem;
@@ -76,8 +76,9 @@ h2 {
     width: 100%;
     z-index: 1000;
     backdrop-filter: blur(12px);
-    background: rgba(14, 14, 14, 0.75);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--panel-dark);
+    color: var(--panel-text);
+    border-bottom: 1px solid var(--panel-border);
 }
 
 .navbar.sticky {
@@ -111,19 +112,19 @@ h2 {
     font-size: 0.86rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: rgba(242, 239, 230, 0.75);
+    color: var(--panel-text-muted);
     transition: color 0.4s var(--ease-expo);
 }
 
 .menu a:hover {
-    color: var(--accent-light);
+    color: var(--accent);
 }
 
 .menu-btn {
     display: none;
     background: transparent;
     border: 0;
-    color: var(--text);
+    color: var(--panel-text);
     font-size: 1.5rem;
 }
 
@@ -142,7 +143,7 @@ h2 {
     width: 420px;
     height: 420px;
     border-radius: 50%;
-    background: rgba(184, 145, 47, 0.26);
+    background: rgba(184, 145, 47, 0.13);
     filter: blur(100px);
     pointer-events: none;
 }
@@ -163,8 +164,8 @@ h2 {
     align-items: center;
     padding: 0.4rem 0.85rem;
     border-radius: 999px;
-    background: var(--surface-highest);
-    border: 1px solid var(--outline);
+    background: var(--panel-dark);
+    border: 1px solid var(--panel-border);
     color: var(--accent-light);
     font-size: 0.75rem;
     font-weight: 700;
@@ -191,7 +192,7 @@ h2 {
 }
 
 .text-3 span {
-    color: var(--accent-light);
+    color: var(--accent-deep);
     font-weight: 700;
 }
 
@@ -225,7 +226,7 @@ h2 {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--accent), #7A5A18);
-    color: var(--accent-light);
+    color: var(--text-on-accent);
     box-shadow: var(--glow);
 }
 
@@ -235,7 +236,7 @@ h2 {
 
 .btn-secondary {
     background: var(--surface-high);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(22, 28, 44, 0.1);
     color: var(--text);
 }
 
@@ -258,7 +259,7 @@ h2 {
 }
 
 .socials a:hover {
-    color: var(--accent-light);
+    color: var(--accent-deep);
 }
 
 .hero-media {
@@ -279,18 +280,18 @@ h2 {
     position: absolute;
     left: -25px;
     bottom: -22px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(22, 28, 44, 0.1);
     background: rgba(42, 42, 42, 0.9);
     border-radius: var(--radius-md);
     padding: var(--space-3);
     display: flex;
     gap: var(--space-2);
     align-items: center;
-    box-shadow: var(--glow);
+    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
 }
 
 .status-card ion-icon {
-    color: var(--accent-light);
+    color: var(--accent-deep);
     font-size: 1.3rem;
 }
 
@@ -324,7 +325,8 @@ h2 {
     border-radius: var(--radius-md);
     padding: var(--space-4);
     transition: border-color 0.4s var(--ease-expo), transform 0.4s var(--ease-expo), box-shadow 0.4s var(--ease-expo);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(22, 28, 44, 0.06);
+    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
 }
 
 .impact-card:hover {
@@ -334,7 +336,7 @@ h2 {
 }
 
 .impact-card i {
-    color: var(--accent-light);
+    color: var(--accent-deep);
     font-size: 1.1rem;
     margin-bottom: 0.7rem;
     display: inline-block;
@@ -354,7 +356,8 @@ h2 {
     border-radius: var(--radius-xl);
     overflow: hidden;
     background: var(--surface);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(22, 28, 44, 0.08);
+    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
     display: grid;
     grid-template-columns: 7fr 5fr;
     max-width: 1120px;
@@ -388,7 +391,7 @@ h2 {
 }
 
 .featured-tech {
-    color: var(--accent-light);
+    color: var(--accent-deep);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-size: 0.72rem;
@@ -442,9 +445,9 @@ h2 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(22, 28, 44, 0.1);
     background: var(--surface-high);
-    color: var(--accent-light);
+    color: var(--accent-deep);
     cursor: pointer;
     display: grid;
     place-items: center;
@@ -454,6 +457,7 @@ h2 {
 .projects-arrow:hover {
     transform: translateY(-2px);
     background: var(--accent);
+    color: var(--text-on-accent);
     box-shadow: var(--glow);
 }
 
@@ -467,9 +471,10 @@ h2 {
 
 .project-card {
     background: var(--surface);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(22, 28, 44, 0.08);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
     transition: transform 0.45s var(--ease-expo), box-shadow 0.45s var(--ease-expo), background 0.45s var(--ease-expo);
     display: flex;
     flex-direction: column;
@@ -554,7 +559,7 @@ h2 {
     padding: 0;
     border: none;
     background: none;
-    color: var(--accent-light);
+    color: var(--accent-deep);
     font-size: 0.78rem;
     font-weight: 600;
     cursor: pointer;
@@ -568,7 +573,7 @@ h2 {
 }
 
 .see-more-btn:focus-visible {
-    outline: 1px solid var(--accent-light);
+    outline: 1px solid var(--accent-deep);
     outline-offset: 2px;
     border-radius: 2px;
 }
@@ -578,7 +583,7 @@ h2 {
     font-size: 0.74rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--accent-light);
+    color: var(--accent-deep);
     font-weight: 700;
     min-height: 2.8em;
     flex-shrink: 0;
@@ -602,7 +607,7 @@ h2 {
 
 .project-body a:hover {
     background: var(--accent);
-    color: var(--accent-light);
+    color: var(--text-on-accent);
 }
 
 .in-progress {
@@ -641,7 +646,7 @@ h2 {
 }
 
 .metrics-badge span {
-    color: var(--accent-light);
+    color: var(--accent-deep);
     font-size: 0.84rem;
 }
 
@@ -652,7 +657,7 @@ h2 {
 }
 
 .skill-group h3 {
-    color: var(--accent-light);
+    color: var(--accent-deep);
     font-size: 0.84rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -678,13 +683,17 @@ h2 {
 }
 
 .skill-pills span i {
-    color: var(--accent-light);
+    color: var(--accent-deep);
     font-size: 0.85rem;
 }
 
 .skill-pills span:hover {
     background: var(--accent);
-    color: var(--accent-light);
+    color: var(--text-on-accent);
+}
+
+.skill-pills span:hover i {
+    color: var(--text-on-accent);
 }
 
 .timeline {
@@ -722,16 +731,17 @@ h2 {
 
 .timeline-details {
     background: var(--surface);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(22, 28, 44, 0.08);
     border-left: 3px solid rgba(232, 217, 175, 0.45);
     border-radius: var(--radius-md);
     padding: 0 var(--space-4);
+    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
     transition: border-color 0.35s var(--ease-expo), box-shadow 0.35s var(--ease-expo);
 }
 
 .timeline-details[open] {
     box-shadow: var(--glow);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(22, 28, 44, 0.1);
     border-left-color: var(--accent-light);
 }
 
@@ -768,7 +778,7 @@ h2 {
 }
 
 .timeline-summary:hover .timeline-title {
-    color: var(--accent-light);
+    color: var(--accent-deep);
 }
 
 .timeline-role {
@@ -786,7 +796,7 @@ h2 {
     justify-content: center;
     border-radius: var(--radius-sm);
     background: rgba(232, 217, 175, 0.1);
-    color: var(--accent-light);
+    color: var(--accent-deep);
     font-size: 1.1rem;
     transition: transform 0.4s var(--ease-expo), background 0.25s ease;
 }
@@ -798,7 +808,7 @@ h2 {
 
 .timeline-panel {
     padding-bottom: var(--space-4);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(22, 28, 44, 0.06);
     padding-top: var(--space-3);
     animation: timeline-panel-in 0.4s var(--ease-expo);
 }
@@ -829,7 +839,8 @@ h2 {
 }
 
 .contact {
-    background: var(--bg-low);
+    background: var(--panel-dark);
+    color: var(--panel-text);
 }
 
 .contact-layout {
@@ -843,7 +854,7 @@ h2 {
 }
 
 .contact-left > p {
-    color: var(--text-muted);
+    color: var(--panel-text-muted);
     margin-bottom: var(--space-5);
 }
 
@@ -856,7 +867,7 @@ h2 {
     display: flex;
     gap: 0.7rem;
     align-items: center;
-    color: var(--text-muted);
+    color: var(--panel-text-muted);
 }
 
 .contact-points ion-icon {
@@ -866,9 +877,10 @@ h2 {
 
 .contact-form-wrap {
     background: var(--surface);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(22, 28, 44, 0.08);
     border-radius: var(--radius-xl);
     padding: var(--space-5);
+    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
 }
 
 .fields {
@@ -898,7 +910,7 @@ h2 {
     color: var(--text);
     padding: 0.9rem 1rem;
     border-radius: 10px;
-    outline: 1px solid rgba(255, 255, 255, 0.05);
+    outline: 1px solid rgba(22, 28, 44, 0.05);
     transition: outline-color 0.3s ease, box-shadow 0.3s ease;
     font-family: inherit;
 }
@@ -914,7 +926,7 @@ h2 {
     border-radius: var(--radius-sm);
     padding: 0.95rem 1rem;
     background: linear-gradient(135deg, var(--accent), #7A5A18);
-    color: var(--accent-light);
+    color: var(--text-on-accent);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -936,9 +948,9 @@ h2 {
 footer {
     padding: var(--space-4) var(--space-5);
     text-align: center;
-    color: rgba(242, 239, 230, 0.55);
-    background: var(--bg-low);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--panel-text-muted);
+    background: var(--panel-dark);
+    border-top: 1px solid var(--panel-border);
 }
 
 footer span a {
@@ -955,7 +967,7 @@ footer span a {
     border: none;
     display: grid;
     place-items: center;
-    color: var(--accent-light);
+    color: var(--text-on-accent);
     background: var(--accent);
     box-shadow: var(--glow);
     opacity: 0;
@@ -1059,10 +1071,10 @@ footer span a {
         width: 100%;
         flex-direction: column;
         gap: var(--space-4);
-        background: var(--bg-low);
+        background: var(--panel-dark);
         padding: var(--space-5);
         transition: left 0.4s var(--ease-expo);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid var(--panel-border);
     }
 
     .menu.active {
