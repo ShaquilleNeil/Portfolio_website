@@ -1,0 +1,33 @@
+:root {
+  /* Base surfaces */
+  --bg: #0B0F1A;
+  --bg-low: #070A12;
+  --bg2: #0F1420;
+  --bg3: #141A2C;
+  --surface: #161C2C;
+  --surface-high: #1F2740;
+  --surface-highest: #2B3550;
+  --border: #2A3350;
+
+  /* Text */
+  --text: #F2EFE6;
+  --text-muted: #B9B6AC;
+  --text-dim: #6E6A5E;
+
+  /* Accent (unified gold, replaces burgundy + brick red) */
+  --accent: #B8912F;
+  --accent-light: #E8D9AF;
+  --accent2: #C9A227;
+  --accent-dim: rgba(184, 145, 47, 0.15);
+  --outline: rgba(232, 217, 175, 0.18);
+  --glow: 0 0 40px rgba(184, 145, 47, 0.24);
+
+  /* Dark text for use ON solid accent backgrounds (contrast fix — gold is
+     too light for white text the way the old reds were dark enough for it) */
+  --text-on-accent: #14181F;
+
+  /* Status colors — kept distinct from brand accent, just tokenized */
+  --status-success: #2F8F5B;
+  --status-progress: #D9A441;
+  --status-error: #E4574C;
+}
