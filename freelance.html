@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="theme.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GHL & Automation Services — Shaquille Neil</title>
@@ -10,20 +11,6 @@
   <style>
     /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #0d0608;
-      --bg2:       #120a0c;
-      --bg3:       #1a0e11;
-      --surface:   #1e1215;
-      --border:    #2a1a1e;
-      --accent:    #c0392b;
-      --accent2:   #e74c3c;
-      --accent-dim: rgba(192, 57, 43, 0.15);
-      --text:      #f0e8e9;
-      --text-muted:#9a8a8c;
-      --text-dim:  #5a4a4c;
-    }
 
     html {
       scroll-behavior: smooth;
@@ -66,7 +53,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px 14px;
-      background: rgba(13, 6, 8, 0.85);
+      background: rgba(11, 15, 26, 0.85);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
@@ -117,7 +104,7 @@
       right: -200px;
       width: 700px;
       height: 700px;
-      background: radial-gradient(circle, rgba(192, 57, 43, 0.08) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(184, 145, 47, 0.08) 0%, transparent 65%);
       pointer-events: none;
     }
 
@@ -204,7 +191,7 @@
       justify-content: center;
       gap: 10px;
       background: var(--accent);
-      color: #fff;
+      color: var(--text-on-accent);
       font-weight: 600;
       font-size: 0.9rem;
       padding: 14px 28px;
@@ -381,14 +368,14 @@
 
     .service-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(192, 57, 43, 0.3);
+      border-color: rgba(184, 145, 47, 0.3);
     }
 
     .service-card:hover::before { transform: scaleX(1); }
 
     .service-card.featured {
-      border-color: rgba(192, 57, 43, 0.35);
-      background: #1f1015;
+      border-color: rgba(184, 145, 47, 0.35);
+      background: var(--surface-high);
     }
 
     .service-card.featured::before { transform: scaleX(1); }
@@ -579,7 +566,7 @@
 
     .t-text {
       font-size: 0.95rem;
-      color: #c0b0b2;
+      color: var(--text-muted);
       line-height: 1.75;
       font-style: italic;
       margin-bottom: 24px;
@@ -597,13 +584,13 @@
       width: 42px;
       height: 42px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), #8b0000);
+      background: linear-gradient(135deg, var(--accent), #7A5A18);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
       font-size: 0.85rem;
-      color: #fff;
+      color: var(--text-on-accent);
       flex-shrink: 0;
       font-family: 'Fraunces', serif;
     }
@@ -726,7 +713,7 @@
     .form-submit {
       width: 100%;
       background: var(--accent);
-      color: #fff;
+      color: var(--text-on-accent);
       font-weight: 700;
       font-size: 0.95rem;
       padding: 16px;
@@ -789,7 +776,7 @@
 
     .cta-box {
       background: var(--bg3);
-      border: 1px solid rgba(192, 57, 43, 0.25);
+      border: 1px solid rgba(184, 145, 47, 0.25);
       border-radius: 24px;
       padding: 70px 60px;
       text-align: center;
@@ -805,7 +792,7 @@
       transform: translateX(-50%);
       width: 500px;
       height: 300px;
-      background: radial-gradient(ellipse, rgba(192, 57, 43, 0.1) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(184, 145, 47, 0.1) 0%, transparent 70%);
       pointer-events: none;
     }
 
