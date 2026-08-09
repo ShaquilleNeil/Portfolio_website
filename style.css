@@ -101,6 +101,32 @@ h2 {
     letter-spacing: -0.03em;
 }
 
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--panel-border);
+    background: transparent;
+    color: var(--panel-text);
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(242, 239, 230, 0.1);
+}
+
 .menu {
     list-style: none;
     display: flex;
@@ -236,7 +262,7 @@ h2 {
 
 .btn-secondary {
     background: var(--surface-high);
-    border: 1px solid rgba(22, 28, 44, 0.1);
+    border: 1px solid rgb(var(--ink-rgb) / 0.1);
     color: var(--text);
 }
 
@@ -280,14 +306,14 @@ h2 {
     position: absolute;
     left: -25px;
     bottom: -22px;
-    border: 1px solid rgba(22, 28, 44, 0.1);
+    border: 1px solid rgb(var(--ink-rgb) / 0.1);
     background: var(--surface);
     border-radius: var(--radius-md);
     padding: var(--space-3);
     display: flex;
     gap: var(--space-2);
     align-items: center;
-    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+    box-shadow: var(--elevation-shadow);
 }
 
 .status-card ion-icon {
@@ -325,8 +351,8 @@ h2 {
     border-radius: var(--radius-md);
     padding: var(--space-4);
     transition: border-color 0.4s var(--ease-expo), transform 0.4s var(--ease-expo), box-shadow 0.4s var(--ease-expo);
-    border: 1px solid rgba(22, 28, 44, 0.06);
-    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+    border: 1px solid rgb(var(--ink-rgb) / 0.06);
+    box-shadow: var(--elevation-shadow);
 }
 
 .impact-card:hover {
@@ -356,8 +382,8 @@ h2 {
     border-radius: var(--radius-xl);
     overflow: hidden;
     background: var(--surface);
-    border: 1px solid rgba(22, 28, 44, 0.08);
-    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+    border: 1px solid rgb(var(--ink-rgb) / 0.08);
+    box-shadow: var(--elevation-shadow);
     display: grid;
     grid-template-columns: 7fr 5fr;
     max-width: 1120px;
@@ -445,7 +471,7 @@ h2 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid rgba(22, 28, 44, 0.1);
+    border: 1px solid rgb(var(--ink-rgb) / 0.1);
     background: var(--surface-high);
     color: var(--accent-deep);
     cursor: pointer;
@@ -471,10 +497,10 @@ h2 {
 
 .project-card {
     background: var(--surface);
-    border: 1px solid rgba(22, 28, 44, 0.08);
+    border: 1px solid rgb(var(--ink-rgb) / 0.08);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+    box-shadow: var(--elevation-shadow);
     transition: transform 0.45s var(--ease-expo), box-shadow 0.45s var(--ease-expo), background 0.45s var(--ease-expo);
     display: flex;
     flex-direction: column;
@@ -731,17 +757,17 @@ h2 {
 
 .timeline-details {
     background: var(--surface);
-    border: 1px solid rgba(22, 28, 44, 0.08);
+    border: 1px solid rgb(var(--ink-rgb) / 0.08);
     border-left: 3px solid rgba(232, 217, 175, 0.45);
     border-radius: var(--radius-md);
     padding: 0 var(--space-4);
-    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+    box-shadow: var(--elevation-shadow);
     transition: border-color 0.35s var(--ease-expo), box-shadow 0.35s var(--ease-expo);
 }
 
 .timeline-details[open] {
     box-shadow: var(--glow);
-    border-color: rgba(22, 28, 44, 0.1);
+    border-color: rgb(var(--ink-rgb) / 0.1);
     border-left-color: var(--accent-light);
 }
 
@@ -808,7 +834,7 @@ h2 {
 
 .timeline-panel {
     padding-bottom: var(--space-4);
-    border-top: 1px solid rgba(22, 28, 44, 0.06);
+    border-top: 1px solid rgb(var(--ink-rgb) / 0.06);
     padding-top: var(--space-3);
     animation: timeline-panel-in 0.4s var(--ease-expo);
 }
@@ -878,10 +904,10 @@ h2 {
 
 .contact-form-wrap {
     background: var(--surface);
-    border: 1px solid rgba(22, 28, 44, 0.08);
+    border: 1px solid rgb(var(--ink-rgb) / 0.08);
     border-radius: var(--radius-xl);
     padding: var(--space-5);
-    box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+    box-shadow: var(--elevation-shadow);
 }
 
 .fields {
@@ -911,7 +937,7 @@ h2 {
     color: var(--text);
     padding: 0.9rem 1rem;
     border-radius: 10px;
-    outline: 1px solid rgba(22, 28, 44, 0.05);
+    outline: 1px solid rgb(var(--ink-rgb) / 0.05);
     transition: outline-color 0.3s ease, box-shadow 0.3s ease;
     font-family: inherit;
 }

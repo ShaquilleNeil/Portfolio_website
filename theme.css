@@ -1,4 +1,5 @@
-:root {
+:root,
+:root[data-theme="light"] {
   /* Paper surfaces */
   --bg: #FAF8F4;
   --bg-low: #F1ECE0;
@@ -16,8 +17,8 @@
 
   /* Gold accent */
   --accent: #B8912F;
-  --accent-light: #E8D9AF;   /* for BACKGROUND/fill use only — see step 3 */
-  --accent-deep: #8A6D22;    /* for TEXT use on light backgrounds — see step 3 */
+  --accent-light: #E8D9AF;   /* for BACKGROUND/fill use only */
+  --accent-deep: #8A6D22;    /* for TEXT use on light surfaces */
   --accent2: #C9A227;
   --accent-dim: rgba(184, 145, 47, 0.12);
   --outline: rgba(184, 145, 47, 0.35);
@@ -29,11 +30,64 @@
   --status-progress: #B8791A;
   --status-error: #C0392B;
 
-  /* Dark navy panels — used ONLY for nav, footer/contact, and badges/pills,
-     per step 4 below. Not the page background. */
+  /* Dark navy panels — used ONLY for nav, footer/contact, CTA, and
+     badges/pills. Not the page background. */
   --panel-dark: #161C2C;
   --panel-dark-2: #1F2740;
   --panel-text: #F2EFE6;
   --panel-text-muted: #C6C2B4;
   --panel-border: rgba(242, 239, 230, 0.16);
+
+  /* RGB triplet (no alpha) for hairline borders that must tint dark-on-light
+     here and light-on-dark in dark mode. Used as rgb(var(--ink-rgb) / X). */
+  --ink-rgb: 22, 28, 44;
+
+  /* Neutral card elevation shadow — needed on light paper so cards read as
+     raised; not needed in dark mode, where lighter surface steps + the gold
+     glow already do that job. */
+  --elevation-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+}
+
+:root[data-theme="dark"] {
+  /* Navy & Gold dark surfaces */
+  --bg: #0B0F1A;
+  --bg-low: #070A12;
+  --bg2: #0F1420;
+  --bg3: #141A2C;
+  --surface: #161C2C;
+  --surface-high: #1F2740;
+  --surface-highest: #2B3550;
+  --border: #2A3350;
+
+  /* Text */
+  --text: #F2EFE6;
+  --text-muted: #B9B6AC;
+  --text-dim: #6E6A5E;
+
+  /* Gold accent */
+  --accent: #B8912F;
+  --accent-light: #E8D9AF;
+  --accent-deep: #E8D9AF;    /* on dark surfaces, "deep" text just reuses accent-light's contrast role */
+  --accent2: #C9A227;
+  --accent-dim: rgba(184, 145, 47, 0.15);
+  --outline: rgba(232, 217, 175, 0.18);
+  --glow: 0 0 40px rgba(184, 145, 47, 0.24);
+  --text-on-accent: #14181F;
+
+  /* Status colors, brightened for legibility on dark surfaces */
+  --status-success: #2F8F5B;
+  --status-progress: #D9A441;
+  --status-error: #E4574C;
+
+  /* Panels stay a navy "chip" one step lighter than the page background,
+     so nav/contact/CTA/badges still read as distinct elevated surfaces
+     even though the whole page is already dark. */
+  --panel-dark: #1F2740;
+  --panel-dark-2: #2B3550;
+  --panel-text: #F2EFE6;
+  --panel-text-muted: #B9B6AC;
+  --panel-border: rgba(242, 239, 230, 0.12);
+
+  --ink-rgb: 242, 239, 230;
+  --elevation-shadow: none;
 }

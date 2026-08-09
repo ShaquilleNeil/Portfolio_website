@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <link rel="stylesheet" href="theme.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -69,6 +75,31 @@
     }
 
     .nav-logo span { color: var(--accent2); }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid var(--panel-border);
+      background: transparent;
+      color: var(--panel-text);
+      font-size: 1rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .theme-toggle:hover { background: rgba(242, 239, 230, 0.1); }
 
     .nav-back {
       display: inline-flex;
@@ -259,7 +290,7 @@
       padding: 28px 24px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+      box-shadow: var(--elevation-shadow);
     }
 
     .stat-card::before {
@@ -366,7 +397,7 @@
       padding: 40px 36px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+      box-shadow: var(--elevation-shadow);
       transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
       cursor: default;
     }
@@ -548,7 +579,7 @@
       border-radius: 16px;
       padding: 36px 32px;
       position: relative;
-      box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+      box-shadow: var(--elevation-shadow);
       animation: fadeIn 0.4s ease;
     }
 
@@ -644,7 +675,7 @@
       max-width: 680px;
       margin-left: auto;
       margin-right: auto;
-      box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+      box-shadow: var(--elevation-shadow);
     }
 
     .review-form-title {
@@ -956,7 +987,10 @@
   <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">Shaquille<span>.dev</span></a>
-    <a href="index.html" class="nav-back">← Back to Portfolio</a>
+    <div class="nav-controls">
+      <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+      <a href="index.html" class="nav-back">← Back to Portfolio</a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -1186,6 +1220,7 @@
     </div>
   </footer>
 
+  <script src="theme-toggle.js"></script>
   <script>
     const STORAGE_KEY_APPROVED = 'approved_reviews';
     const STORAGE_KEY_PENDING  = 'pending_reviews';

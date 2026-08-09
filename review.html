@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <link rel="stylesheet" href="theme.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -73,6 +79,29 @@
 
     .brand span { color: var(--accent2); }
 
+    .theme-toggle {
+      position: fixed;
+      top: max(16px, env(safe-area-inset-top));
+      right: max(16px, env(safe-area-inset-right));
+      z-index: 50;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.25s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .theme-toggle:hover { background: var(--bg-low); }
+
     .avatar {
       width: 72px;
       height: 72px;
@@ -115,7 +144,7 @@
       border: 1px solid var(--border);
       border-radius: 24px;
       padding: 48px 44px;
-      box-shadow: 0 1px 3px rgba(22, 28, 44, 0.06), 0 8px 20px rgba(22, 28, 44, 0.08);
+      box-shadow: var(--elevation-shadow);
       animation: fadeUp 0.5s ease 0.1s both;
       position: relative;
       overflow: hidden;
@@ -411,6 +440,8 @@
 </head>
 <body>
 
+  <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+
   <div class="page-header">
     <a href="freelance.html" class="brand">Shaquille<span>.dev</span></a>
     <div class="avatar">SN</div>
@@ -492,6 +523,7 @@
     <a href="mailto:Shaquille-36@hotmail.com">Contact</a>
   </div>
 
+  <script src="theme-toggle.js"></script>
   <script>
     // ── Chip selection ──
     let selectedProjectType = '';
