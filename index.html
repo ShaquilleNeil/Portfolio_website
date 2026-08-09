@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaquille Neil | Portfolio</title>
@@ -13,6 +19,7 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script type="text/javascript" src="java.js"></script>
+    <script type="text/javascript" src="theme-toggle.js"></script>
     <script>
         (function () { emailjs.init({ publicKey: "OA4VGF-OPafeORdSI" }); })();
     </script>
@@ -21,15 +28,18 @@
     <header class="navbar">
         <div class="navbar-inner">
             <div class="brand">Shaquille.dev</div>
-            <button class="menu-btn" aria-label="Open navigation"><i class="bi bi-list"></i></button>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="freelance.html">Freelance</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+                <button class="menu-btn" aria-label="Open navigation"><i class="bi bi-list"></i></button>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="freelance.html">Freelance</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
